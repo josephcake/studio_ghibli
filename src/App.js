@@ -2,10 +2,13 @@ import './App.css';
 import {useEffect} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 
+import Navigation from './navigation/Navigation'
+
 const App = () => {
 
   useEffect(() => {
-
+    //endpoings
+    //films,people,locations,species,vehicles
     fetch(`https://ghibliapi.herokuapp.com/films`)
     .then(resq=>resq.json())
     .then(resp=>console.log(resp))    
@@ -21,6 +24,7 @@ const App = () => {
   
   return (
       <div className='App'>
+        <Navigation/>
       </div>
   );
 }
