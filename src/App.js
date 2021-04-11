@@ -1,20 +1,15 @@
-import logo from './logo.svg';
-import Counter from './Counter';
-
 import './App.css';
-import {Provider} from 'react-redux';
-import { store } from './Store';
-
-store.dispatch({ type: 'INCREMENT' });
-store.dispatch({ type: 'DECREMENT' });
-
+import {useSelector, useDispatch} from 'react-redux';
 const App = () => {
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
+
+  console.log("state:", state);
+  console.log("dispatch:", dispatch);
+  
   return (
-    <Provider store={store}>
       <div className='App'>
-        <Counter />
       </div>
-    </Provider>
   );
 }
 
