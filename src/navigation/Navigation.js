@@ -1,17 +1,29 @@
 import React from 'react';
-import styled from 'styled-components';
-
-
-const NavigationBar = styled.div`
-  width:100%;
-  height:70px;
-  background-color: rgba(60,90,160,1);
-`
-
+import {
+  NavigationBar, 
+  NavigationBarInterior, 
+  NavigationLogoContainer, 
+  NavigationItemContainer, 
+  NavigationLogo, 
+  NavigationItem
+} from './Navigation.styled.js'
 
 const Navigation = () =>{
   return (
-    <NavigationBar></NavigationBar>
+    <NavigationBar>
+      <NavigationBarInterior>
+        <NavigationLogoContainer>
+          <NavigationLogo></NavigationLogo>
+        </NavigationLogoContainer>
+        <NavigationItemContainer>
+          <NavigationItem></NavigationItem>
+          <NavigationItem></NavigationItem>
+          <NavigationItem></NavigationItem>
+          <NavigationItem></NavigationItem>
+          <NavigationItem></NavigationItem>
+        </NavigationItemContainer>
+      </NavigationBarInterior>
+    </NavigationBar>
   )
 }
 export default Navigation
