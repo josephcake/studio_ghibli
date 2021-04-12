@@ -6,7 +6,7 @@ import Navigation from './navigation/Navigation'
 import Modal from './modal/Modal'
 
 const App = () => {
-  const [displayModal, setDisplayModal] = useState(null) 
+  const [displayModal, setDisplayModal] = useState(1) 
   useEffect(() => {
     //endpoings
     //films,people,locations,species,vehicles
@@ -16,7 +16,7 @@ const App = () => {
 
     //check localStorage
     if(localStorage.preview){
-      setDisplayModal(1)
+      setDisplayModal(null)
     }else{
 
     }
@@ -31,7 +31,7 @@ const App = () => {
   return (
       <div className='App'>
         <Navigation/>
-        {displayModal??<Modal/>}
+        {displayModal&&<Modal/>}
       </div>
   );
 }

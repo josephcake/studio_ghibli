@@ -36,7 +36,6 @@ const NavigationItem = styled.div`
 const NavigationItemText = styled.p`
   font-size: clamp(10px, 15px, 18px);
   text-transform:capitalize;
-  letter-spacing:1px;
 `;
 const Logo = styled.div`
   cursor: pointer;
@@ -49,10 +48,12 @@ const Logo = styled.div`
   height: 100%;
 `;
 const LogoJapanese = styled.p`
-  margin:0;
-  font-size:clamp(5px, 12px, 15px);
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: clamp(5px, 12px, 15px);
 `;
 const LogoEnglish = styled.p`
+  letter-spacing: 2px;
   margin: 0;
   font-size: clamp(5px, 12px, 15px);
 `;
