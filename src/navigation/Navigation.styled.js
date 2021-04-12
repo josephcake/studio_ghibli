@@ -5,40 +5,65 @@ const ParentDiv = styled.div`
   height: 100%;
 `;
 const NavigationBar = styled.div`
-  height: 100%;
-  width: 100%;
-  height: 50px;
+  /* width: 100vw; */
+  height: 70px;
   background-color: rgba(60, 90, 160, 1);
-  padding: 10px 0;
+  padding: 5px 20px;
+  color:lightgray;
 `;
 const NavigationBarInterior = styled(ParentDiv)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100%;
-  width: 100%;
 `;
 const NavigationLogoContainer = styled(ParentDiv)`
-  width: 100%;
-  height: 100%;
 `;
 const NavigationItemContainer = styled(ParentDiv)`
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 `;
-const NavigationLogo = styled.div`
-  width: 100px;
-  height: 100%;
-  border: solid 1px palevioletred;
-`;
-
 const NavigationItem = styled.div`
   width: 100px;
   height: 100%;
-  border: solid 1px paleturquoise;
+  /* border-bottom: solid 1px paleturquoise; */
+  /* border-radius: 20px; */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  cursor: pointer;
+`;
+const NavigationItemText = styled.p`
+  font-size: clamp(10px, 15px, 18px);
+  text-transform:capitalize;
+  letter-spacing:1px;
+`;
+const Logo = styled.div`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  /* border: solid 1px yellow; */
+  width: max-content;
+  height: 100%;
+`;
+const LogoJapanese = styled.p`
+  margin:0;
+  font-size:clamp(5px, 12px, 15px);
+`;
+const LogoEnglish = styled.p`
+  margin: 0;
+  font-size: clamp(5px, 12px, 15px);
 `;
 
-export {NavigationBar, NavigationBarInterior, NavigationLogoContainer, NavigationItemContainer, NavigationLogo, NavigationItem}
+export {NavigationBar,
+  NavigationBarInterior,
+  NavigationLogoContainer,
+  NavigationItemContainer,
+  NavigationItem,
+  NavigationItemText,
+  Logo,
+  LogoJapanese,
+  LogoEnglish
+}
