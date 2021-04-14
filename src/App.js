@@ -17,8 +17,6 @@ const App = () => {
     //check localStorage
     if(localStorage.preview){
       setDisplayModal(null)
-    }else{
-
     }
 
   }, [])

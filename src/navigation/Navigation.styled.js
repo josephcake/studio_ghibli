@@ -4,6 +4,7 @@ const ParentDiv = styled.div`
   width: 100%;
   height: 100%;
 `;
+
 const NavigationBar = styled.div`
   /* width: 100vw; */
   height: 70px;
