@@ -1,5 +1,5 @@
 import React,{createRef, useEffect, useState} from 'react';
-import {vidInfo} from './constant'
+import {filmInfo} from './constant'
 import styled from "styled-components";
 
 
@@ -11,8 +11,8 @@ const YoutubeVid = styled.div`
 `
 const Overlay = styled.div`
   position:absolute;
-  background-color:rgba(0,0,0,0.3);
-  height: calc(100vh - 80px);
+  /* background-color:rgba(0,0,0,0.3); */
+  height: calc(100vh - 120px);
   width: 100vw;
   display: block;
   z-index:9999999;
@@ -22,7 +22,7 @@ const Landing = () =>{
   const vidRef = createRef()
   const iframeRef = createRef()
   const [vidDimension, setVidDimension] = useState({h:0,w:0})
-  const randomlySelectedVid = Math.floor(Math.random() * vidInfo.length - 1);
+  const randomlySelectedVid = Math.floor(Math.random() * filmInfo.length - 1);
 
   
   useEffect(() => {
@@ -42,7 +42,7 @@ const Landing = () =>{
         ref={iframeRef}
         width={vidDimension.w}
         height={vidDimension.h}
-        src={`https://www.youtube-nocookie.com/embed/${vidInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
+        src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
         title="YouTube video player"
         frameBorder="0"
         allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"

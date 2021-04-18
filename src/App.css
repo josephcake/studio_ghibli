@@ -23,8 +23,10 @@ a:visited{
 {
   display: none !important;
   visibility: hidden !important;
+  transform: translateX(100%) !important;
 }
 .ytp-pause-overlay-controls-hidden .ytp-pause-overlay {
   display: none !important;
   visibility: hidden !important;
+  transform: translateX(100%) !important;
 }
