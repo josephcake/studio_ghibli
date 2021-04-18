@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import Navigation from './navigation/Navigation'
 import Modal from './modal/Modal'
+import Landing from './landing/Landing'
 
 const App = () => {
   const [displayModal, setDisplayModal] = useState(1) 
@@ -29,6 +30,7 @@ const App = () => {
   return (
       <div className='App'>
         <Navigation/>
+        <Landing/>
         {displayModal&&<Modal/>}
       </div>
   );

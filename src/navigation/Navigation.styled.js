@@ -8,7 +8,8 @@ const ParentDiv = styled.div`
 const NavigationBar = styled.div`
   /* width: 100vw; */
   height: 70px;
-  background-color: rgba(60, 90, 160, 1);
+  /* background-color: rgba(60, 90, 160, 1); */
+  background-color: #838383;
   padding: 5px 20px;
   color:lightgray;
 `;
@@ -37,6 +38,7 @@ const NavigationItem = styled.div`
 const NavigationItemText = styled.p`
   font-size: clamp(10px, 15px, 18px);
   text-transform:capitalize;
+  letter-spacing:2px;
 `;
 const Logo = styled.div`
   cursor: pointer;
