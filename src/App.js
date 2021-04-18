@@ -7,6 +7,7 @@ import Modal from './modal/Modal'
 import Landing from './landing/Landing'
 
 const App = () => {
+  
   const [displayModal, setDisplayModal] = useState(1) 
   useEffect(() => {
     //endpoings
