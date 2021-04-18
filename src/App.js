@@ -1,10 +1,12 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 import {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
-
 import Navigation from './navigation/Navigation'
 import Modal from './modal/Modal'
 import Landing from './landing/Landing'
+import Films from './films/Films'
 
 const App = () => {
   
@@ -29,11 +31,20 @@ const App = () => {
 
 
   return (
-      <div className='App'>
-        <Navigation/>
-        <Landing/>
-        {displayModal&&<Modal/>}
-      </div>
+    <div className="App">
+      <Router>
+        <Navigation />
+        <Switch>
+          <Route path="/films">
+            <Films />
+          </Route>
+          <Route path="/">
+            <Landing />
+          </Route>
+          {displayModal && <Modal />}
+        </Switch>
+      </Router>
+    </div>
   );
 }
 

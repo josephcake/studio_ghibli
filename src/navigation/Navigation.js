@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components';
 import {
   NavigationBar,
@@ -18,17 +19,31 @@ const Navigation = () =>{
     <NavigationBar>
       <NavigationBarInterior>
         <NavigationLogoContainer>
+          <Link to="/">
             <Logo>
               <LogoJapanese>スタジオジブリ作品</LogoJapanese>
               <LogoEnglish>STUDIO GHIBLI</LogoEnglish>
             </Logo>
+          </Link>
         </NavigationLogoContainer>
         <NavigationItemContainer>
-          <NavigationItem><NavigationItemText>films</NavigationItemText></NavigationItem>
-          <NavigationItem><NavigationItemText>characters</NavigationItemText></NavigationItem>
-          <NavigationItem><NavigationItemText>locations</NavigationItemText></NavigationItem>
-          <NavigationItem><NavigationItemText>species</NavigationItemText></NavigationItem>
-          <NavigationItem><NavigationItemText>vehicles</NavigationItemText></NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>
+              <Link to="films">films</Link>
+            </NavigationItemText>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>characters</NavigationItemText>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>locations</NavigationItemText>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>species</NavigationItemText>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>vehicles</NavigationItemText>
+          </NavigationItem>
         </NavigationItemContainer>
       </NavigationBarInterior>
     </NavigationBar>
