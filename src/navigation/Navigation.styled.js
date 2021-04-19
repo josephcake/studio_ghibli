@@ -6,12 +6,14 @@ const ParentDiv = styled.div`
 `;
 
 const NavigationBar = styled.div`
-  /* width: 100vw; */
+  width: 100vw;
   height: 70px;
-  /* background-color: rgba(60, 90, 160, 1); */
-  background-color: #838383;
+  background-color: rgba(60, 60, 60, 0.9);
+  /* background-color: #838383; */
   padding: 5px 20px;
   color:lightgray;
+  position:sticky;
+  top:0;
 `;
 const NavigationBarInterior = styled(ParentDiv)`
   display: flex;
@@ -36,7 +38,8 @@ const NavigationItem = styled.div`
   cursor: pointer;
 `;
 const NavigationItemText = styled.p`
-  font-size: clamp(10px, 15px, 18px);
+  /* font-size: clamp(10px, 15px, 18px); */
+  font-size: clamp(15px, 20px, 25px);
   text-transform:capitalize;
   letter-spacing:2px;
 `;
