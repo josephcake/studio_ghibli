@@ -24,22 +24,22 @@ const Home = () =>{
       <LatestInfo>
         <NavSpacer />
         <h1>Latest Infomation</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
       </LatestInfo>
       <EventInfo>
         <NavSpacer />
         <h1>Event Information</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
-        <h1>lorem ipsum</h1>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
+        <h4>lorem ipsum</h4>
       </EventInfo>
     </HomeContainer>
   );

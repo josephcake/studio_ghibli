@@ -6,6 +6,7 @@ import {useEffect, useState} from 'react';
 import Navigation from './navigation/Navigation'
 import Modal from './modal/Modal'
 import Home from './home/Home'
+import Footer from './footer/Footer'
 import Films from './films/Films'
 
 const App = () => {
@@ -33,16 +34,17 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Navigation />
+        <Navigation/>
         <Switch>
           <Route path="/films">
             <Films />
           </Route>
           <Route path="/">
             <Home/>
-          </Route>
+          </Route>          
           {displayModal && <Modal />}
         </Switch>
+        <Footer/>
       </Router>
     </div>
   );
