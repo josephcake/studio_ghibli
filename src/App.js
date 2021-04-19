@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import './App.css';
 import {useEffect, useState} from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+// import {useSelector, useDispatch} from 'react-redux';
 import Navigation from './navigation/Navigation'
 import Modal from './modal/Modal'
-import Landing from './landing/Landing'
+import Home from './home/Home'
 import Films from './films/Films'
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
             <Films />
           </Route>
           <Route path="/">
-            <Landing />
+            <Home/>
           </Route>
           {displayModal && <Modal />}
         </Switch>

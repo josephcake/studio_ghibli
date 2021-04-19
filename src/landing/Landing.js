@@ -25,10 +25,7 @@ const Overlay = styled.div`
 `;
 
 
-const LatestInfo = styled.div`
-  width:100vw;
-  height:100vh;
-`
+
 
 const Landing = () =>{
   const vidRef = createRef()
@@ -47,7 +44,6 @@ const Landing = () =>{
   }, [])
 
   return (
-    <LandingContainer>
       <YoutubeVid ref={vidRef}>
         <Overlay />
         <iframe
@@ -62,10 +58,6 @@ const Landing = () =>{
           allowFullScreen
         ></iframe>
       </YoutubeVid>
-      <LatestInfo>
-
-      </LatestInfo>
-    </LandingContainer>
   );
 }
 
