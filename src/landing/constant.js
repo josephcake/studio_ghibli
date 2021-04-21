@@ -203,7 +203,7 @@ const filmInfo = [
 const newsInfo = [
   {
     title: "Movie: 'Earwig and the Witch'",
-    subtitle: "April 29 (Thursday / holiday) National Road Show",
+    subtitle: "April 29 (Thursday) National Road Show",
     href: "https://www.aya-and-the-witch.jp/",
   },
   {
@@ -223,18 +223,17 @@ const newsInfo = [
   },
   {
     title: "Ghibli Exposition",
-    subtitle:
-      "Held at the Aichi Prefectural Museum of Art from Saturday , July 17th !",
+    subtitle: "Held at the Aichi Prefectural Museum of Art from July 17th!",
     href: "https://www.ghibli.jp/event/expo/",
   },
   {
     title: "Isao Takahata Exhibition",
-    subtitle: "Held at Fukuoka Art Museum from Thursday, April 29th !",
+    subtitle: "Held at Fukuoka Art Museum from April 29th!",
     href: "https://www.ghibli.jp/event/takahata/",
   },
   {
     title: "Animage and Ghibli Exhibition",
-    subtitle: "Held at Matsuya Ginza from Thursday , April 15th !",
+    subtitle: "Held at Matsuya Ginza from April 15th!",
     href: "https://www.ghibli.jp/event/animage/",
   },
   {

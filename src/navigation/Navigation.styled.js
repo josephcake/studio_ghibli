@@ -7,7 +7,7 @@ const ParentDiv = styled.div`
 
 const NavigationBar = styled.div`
   width: 100vw;
-  height: 70px;
+  height: 40px;
   background-color: rgba(60, 60, 60, 0.9);
   /* background-color: #838383; */
   padding: 5px 20px;
@@ -25,13 +25,15 @@ const NavigationLogoContainer = styled(ParentDiv)`
 const NavigationItemContainer = styled(ParentDiv)`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  align-items:center;
 `;
 const NavigationItem = styled.div`
   width: 100px;
   height: 100%;
   /* border-bottom: solid 1px paleturquoise; */
   /* border-radius: 20px; */
+  margin:0 10px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -39,9 +41,9 @@ const NavigationItem = styled.div`
 `;
 const NavigationItemText = styled.p`
   /* font-size: clamp(10px, 15px, 18px); */
-  font-size: clamp(15px, 20px, 25px);
+  /* font-size: clamp(15px, 20px, 25px); */
   text-transform:capitalize;
-  letter-spacing:2px;
+  /* letter-spacing:2px; */
 `;
 const Logo = styled.div`
   cursor: pointer;

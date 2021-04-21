@@ -17,16 +17,18 @@ import {
 const Navigation = () =>{
   return (
     <NavigationBar>
-      <NavigationBarInterior>
-        <NavigationLogoContainer>
-          <Link to="/">
-            <Logo>
-              <LogoJapanese>スタジオジブリ作品</LogoJapanese>
-              <LogoEnglish>STUDIO GHIBLI</LogoEnglish>
-            </Logo>
-          </Link>
-        </NavigationLogoContainer>
+      <NavigationBarInterior>        
         <NavigationItemContainer>
+          <NavigationItem>
+            <NavigationItemText>
+              <Link to="/">
+                <Logo>
+                  <LogoJapanese>スタジオジブリ作品</LogoJapanese>
+                  {/* <LogoEnglish>STUDIO GHIBLI</LogoEnglish> */}
+                </Logo>
+              </Link>
+            </NavigationItemText>
+          </NavigationItem>
           <NavigationItem>
             <NavigationItemText>
               <Link to="films">films</Link>

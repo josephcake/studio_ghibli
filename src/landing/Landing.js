@@ -2,19 +2,19 @@ import React, { createRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import {newsInfo} from './constant'
 import bg from './assets/landing_wallpaper.png'
+import earwig from '../assets/posters/poster_earwig_witch.jpg'
 
 const LandingContainer = styled.div`
   width: 100vw;
-  height: calc(100vh - 80px);
-  /* position:absolute; */
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-image: url(${bg});
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: contain;
-  background-position:center;
-  background-color:lightgray;
+  background-position: center;
+  background-color: lightgray;
 `;
 
 const LandingFooter = styled.div`
@@ -45,10 +45,14 @@ const LandingNewsContainer = styled.div`
   /* flex-shrink: 2; */
 `;
 
-const FeatureFilmContainer = styled.div`
+const FeatureFilmContainer = styled.a`
   background-color:black;
-  height:100%;
-  width:100%;
+  height:300px;
+  width:200px;
+  background-image:url(${earwig});
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
 `
 
 const NewsContainer = styled.div`
@@ -74,7 +78,7 @@ const NewsTitle = styled.a`
   background-color: black;
   /* flex-grow:0; */
   /* width: auto; */
-  width: 30%;
+  width: 25%;
   padding: 7px;
   border-radius: 7px;
   text-indent: 5px;
@@ -92,7 +96,7 @@ const NewsSubtitle = styled.h1`
   font-size: clamp(10px, 14px, 16px);
   letter-spacing: 1px;
   /* flex-shrink:1; */
-  width: 70%;
+  width: 75%;
   padding: 7px;
   margin: 0;
 `;
@@ -107,10 +111,8 @@ const Landing = () =>{
   return (
     <LandingContainer>
       <LandingNewsContainer>
-        <NewsContainer>
-          {news}
-        </NewsContainer>
-        <FeatureFilmContainer></FeatureFilmContainer>
+        <NewsContainer>{news}</NewsContainer>
+        <FeatureFilmContainer href={"https://www.aya-and-the-witch.jp/"} target={"_blank"} />
       </LandingNewsContainer>
       <LandingFooter>
         <LandingFooterText>studio ghibli</LandingFooterText>
