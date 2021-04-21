@@ -1,14 +1,20 @@
 import React, { createRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import {newsInfo} from './constant'
+import bg from './assets/landing_wallpaper.png'
 
 const LandingContainer = styled.div`
   width: 100vw;
   height: calc(100vh - 80px);
   /* position:absolute; */
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(${bg});
+  background-repeat:no-repeat;
+  background-size: contain;
+  background-position:center;
+  background-color:lightgray;
 `;
 
 const LandingFooter = styled.div`
@@ -30,18 +36,26 @@ const LandingFooterText = styled.h1`
 `
 const LandingNewsContainer = styled.div`
   /* border: solid lightgray 1px; */
-  padding:10px;
-  height:40%;
+  padding: 10px;
+  height: 40%;
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-shrink: 2; */
+`;
+
+const FeatureFilmContainer = styled.div`
+  background-color:black;
+  height:100%;
   width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
 `
 
 const NewsContainer = styled.div`
-  width: 50%;
+  min-width: 70%;
   height: 100%;
   display: flex;
+  flex-shrink:1;
   flex-direction:column;
   justify-content: space-evenly;
   align-items: center;
@@ -54,25 +68,31 @@ const News = styled.div`
 `;
 const NewsTitle = styled.a`
   font-weight: 400;
-  font-size: clamp(10px, 14px, 18px);
+  font-size: clamp(10px, 14px, 16px);
   letter-spacing: 1px;
   color: white;
   background-color: black;
-  width: 35%;
+  /* flex-grow:0; */
+  /* width: auto; */
+  width: 30%;
   padding: 7px;
   border-radius: 7px;
-  text-indent: 10px;
+  text-indent: 5px;
   margin: 0;
   text-decoration: none;
   &:visited {
     color: white;
   }
+  &:hover {
+    background-color:rgba(0,0,0,0.7)
+  }
 `;
 const NewsSubtitle = styled.h1`
   font-weight: 200;
-  font-size: clamp(10px, 14px, 18px);
+  font-size: clamp(10px, 14px, 16px);
   letter-spacing: 1px;
-  width: 65%;
+  /* flex-shrink:1; */
+  width: 70%;
   padding: 7px;
   margin: 0;
 `;
@@ -90,6 +110,7 @@ const Landing = () =>{
         <NewsContainer>
           {news}
         </NewsContainer>
+        <FeatureFilmContainer></FeatureFilmContainer>
       </LandingNewsContainer>
       <LandingFooter>
         <LandingFooterText>studio ghibli</LandingFooterText>
