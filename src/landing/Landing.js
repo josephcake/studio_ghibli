@@ -1,63 +1,72 @@
-import React,{createRef, useEffect, useState} from 'react';
-// import {filmInfo} from './constant'
+import React, { createRef, useEffect, useState } from "react";
 import styled from "styled-components";
 
-
 const LandingContainer = styled.div`
-  width:100vw;
-  /* position:absolute; */
-  /* top:80px; */
-`
-
-const YoutubeVid = styled.div`
-  height:calc(100vh - 80px);
-  width:100vw;
-  display:block;
-`
-const Overlay = styled.div`
-  position:absolute;
-  /* background-color:rgba(0,0,0,0.3); */
-  top:80px;
-  height: calc(100vh - 160px);
   width: 100vw;
-  display: block;
-  z-index:9999999;
+  height: calc(100vh - 80px);
+  /* position:absolute; */
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 `;
 
+const LandingFooter = styled.div`
+  /* position:absolute; */
+  /* bottom:0; */
+  height:50px;
+  width:100%;
+  background-color:black;
+  display:flex;
+  justify-content:start;
+  align-items:center;
+`
+const LandingFooterText = styled.h1`
+  color:white;
+  font-weight:200;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-left:20px;
+`
+const LandingNewsContainer = styled.div`
+  border: solid lightgray 1px;
+  height:50%;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+`
 
-
+const NewsContainer = styled.div`
+  width:50%;
+  height:100%;
+`
+const News = styled.div`
+  width: 100%;
+`;
+const NewsTitle = styled.h1`
+  font-size:16px;
+`
+const NewsSubtitle = styled.h1`
+  font-size: 16px;
+`;
 
 const Landing = () =>{
-  const vidRef = createRef()
-  const iframeRef = createRef()
-  const [vidDimension, setVidDimension] = useState({h:0,w:0})
-  // const randomlySelectedVid = Math.floor(Math.random() * filmInfo.length - 1);
-
-  
-  useEffect(() => {
-    const h = vidRef.current.offsetHeight.toString()
-    const w = vidRef.current.offsetWidth.toString()
-    setVidDimension((prevState) => ({
-      ...prevState,
-      h,w
-    }));
-  }, [])
-
   return (
-      <YoutubeVid ref={vidRef}>
-        <Overlay />
-        <iframe
-          ref={iframeRef}
-          width={vidDimension.w}
-          height={vidDimension.h}
-          // src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
-          src={`https://www.youtube-nocookie.com/embed/uBnRTMGRMkM?playlist=uBnRTMGRMkM&autoplay=1&mute=1&showinfo=0&controls=1&loop=1`}
-          title="YouTube video player"
-          frameBorder="0"
-          allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-          allowFullScreen
-        ></iframe>
-      </YoutubeVid>
+    <LandingContainer>
+      <LandingNewsContainer>
+        <NewsContainer>
+          <News>
+            <NewsTitle>Movie "Earwig and the Witch"</NewsTitle>
+            <NewsSubtitle>
+              April 29 (Thursday / holiday) National Road Show
+            </NewsSubtitle>
+          </News>
+        </NewsContainer>
+      </LandingNewsContainer>
+      <LandingFooter>
+        <LandingFooterText>studio ghibli</LandingFooterText>
+      </LandingFooter>
+    </LandingContainer>
   );
 }
 

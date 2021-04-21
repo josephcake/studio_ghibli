@@ -4,14 +4,11 @@ import Landing from '../landing/Landing'
 
 const HomeContainer = styled.div`  
 `
-const LatestInfo = styled.div`
+const Info = styled.div`
   width: 100vw;
   height: 100vh;
 `;
-const EventInfo = styled.div`
-  width: 100vw;
-  height: 100vh;
-`;
+
 const NavSpacer = styled.div`
   height: 80px;
   width: 100%;
@@ -21,7 +18,7 @@ const Home = () =>{
   return (
     <HomeContainer>
       <Landing />
-      <LatestInfo>
+      <Info>
         <NavSpacer />
         <h1>Latest Infomation</h1>
         <h4>lorem ipsum</h4>
@@ -30,8 +27,8 @@ const Home = () =>{
         <h4>lorem ipsum</h4>
         <h4>lorem ipsum</h4>
         <h4>lorem ipsum</h4>
-      </LatestInfo>
-      <EventInfo>
+      </Info>
+      <Info>
         <NavSpacer />
         <h1>Event Information</h1>
         <h4>lorem ipsum</h4>
@@ -40,7 +37,7 @@ const Home = () =>{
         <h4>lorem ipsum</h4>
         <h4>lorem ipsum</h4>
         <h4>lorem ipsum</h4>
-      </EventInfo>
+      </Info>
     </HomeContainer>
   );
 }
