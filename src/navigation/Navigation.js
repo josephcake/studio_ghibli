@@ -17,7 +17,7 @@ import {
 const Navigation = () =>{
   return (
     <NavigationBar>
-      <NavigationBarInterior>        
+      <NavigationBarInterior>
         <NavigationItemContainer>
           <NavigationItem>
             <NavigationItemText>
@@ -45,6 +45,14 @@ const Navigation = () =>{
           </NavigationItem>
           <NavigationItem>
             <NavigationItemText>vehicles</NavigationItemText>
+          </NavigationItem>
+        </NavigationItemContainer>
+        <NavigationItemContainer>
+          <NavigationItem>
+            <NavigationItemText>Twitter</NavigationItemText>
+          </NavigationItem>
+          <NavigationItem>
+            <NavigationItemText>Line</NavigationItemText>
           </NavigationItem>
         </NavigationItemContainer>
       </NavigationBarInterior>

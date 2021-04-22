@@ -8,9 +8,10 @@ const ParentDiv = styled.div`
 const NavigationBar = styled.div`
   width: 100vw;
   height: 40px;
-  background-color: rgba(60, 60, 60, 0.9);
+  /* background-color: rgba(20, 20, 20, 0.9); */
+  background-color: black;
   /* background-color: #838383; */
-  padding: 5px 20px;
+  padding: 5px 0px;
   color:lightgray;
   position:sticky;
   top:0;
@@ -19,13 +20,14 @@ const NavigationBarInterior = styled(ParentDiv)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items:center;
 `;
 const NavigationLogoContainer = styled(ParentDiv)`
 `;
-const NavigationItemContainer = styled(ParentDiv)`
+const NavigationItemContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
   align-items:center;
 `;
 const NavigationItem = styled.div`

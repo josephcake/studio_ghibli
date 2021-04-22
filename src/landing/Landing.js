@@ -79,7 +79,7 @@ const NewsTitle = styled.a`
   /* flex-grow:0; */
   /* width: auto; */
   width: 25%;
-  padding: 7px;
+  padding: 10px;
   border-radius: 7px;
   text-indent: 5px;
   margin: 0;
@@ -97,7 +97,7 @@ const NewsSubtitle = styled.h1`
   letter-spacing: 1px;
   /* flex-shrink:1; */
   width: 75%;
-  padding: 7px;
+  padding: 10px;
   margin: 0;
 `;
 
