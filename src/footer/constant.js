@@ -1,3 +1,8 @@
+import disney_banner from './assets/disney_banner.png'
+import line_banner from './assets/ghibli-line_banner.png'
+import twitter_banner from './assets/ghibli-twitter_banner.png'
+import museum_banner from './assets/ghibli-museum_banner.png'
+
 const CategoryMenu = [
   {
     title: "Latest information",
@@ -83,4 +88,11 @@ const RelatedSites = [
   {title:"Disney (Blu-ray / DVD)", url:"http://www.disney.co.jp/studio/ghibli.html"},
 ]
 
-export {CategoryMenu, TravelExhibition, RelatedSites}
+const FooterBanners = [
+  {src:museum_banner,url:"https://www.ghibli-museum.jp/"},
+  {src:twitter_banner,url:"https://twitter.com/JP_GHIBLI"},
+  {src:line_banner,url:"https://line.me/ti/p/%40studioghibli"},
+  {src:disney_banner,url:"http://www.disney.co.jp/studio/ghibli.html"},
+]
+
+export {CategoryMenu, TravelExhibition, RelatedSites, FooterBanners}
