@@ -49,6 +49,22 @@ const InfoTitleWrapper = styled.a`
     text-decoration:underline;
   }
 `;
+
+const ReadMoreWrapper = styled.div`  
+  width:60%;
+  display:flex;
+  justify-content:flex-start;
+
+`
+
+const ReadMore = styled.h1`
+  font-size:30px;
+  font-weight:200;
+  border:solid lightgray 1px;
+  border-radius: 5px;
+  padding:5px;
+
+`
 const Info = () =>{
   const latestInfo = LatestInfo.map((info)=>(
     <InfoDetails key={info.title}>
@@ -77,6 +93,9 @@ const Info = () =>{
         <InfoBreaker />
         {latestInfo}
       </InfoSection>
+      <ReadMoreWrapper>
+        <ReadMore>Read more</ReadMore>
+      </ReadMoreWrapper>
       <InfoSection>
         <InfoHeader>event information</InfoHeader>
         <InfoBreaker />
