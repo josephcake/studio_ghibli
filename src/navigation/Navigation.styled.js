@@ -41,11 +41,9 @@ const NavigationItem = styled.div`
   align-items:center;
   cursor: pointer;
 `;
-const NavigationItemText = styled.p`
-  /* font-size: clamp(10px, 15px, 18px); */
-  /* font-size: clamp(15px, 20px, 25px); */
+const NavigationItemText = styled.h1`
+  font-size: clamp(10px, 15px, 18px);
   text-transform:capitalize;
-  /* letter-spacing:2px; */
 `;
 const Logo = styled.div`
   cursor: pointer;
@@ -57,12 +55,14 @@ const Logo = styled.div`
   width: max-content;
   height: 100%;
 `;
-const LogoJapanese = styled.p`
+const LogoJapanese = styled.h1`
+  font-size: clamp(10px, 15px, 18px);
   letter-spacing: 1px;
   margin: 0;
   font-size: clamp(5px, 12px, 15px);
 `;
-const LogoEnglish = styled.p`
+const LogoEnglish = styled.h1`
+  font-size: clamp(10px, 15px, 18px);
   letter-spacing: 2px;
   margin: 0;
   font-size: clamp(5px, 12px, 15px);

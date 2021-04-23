@@ -57,14 +57,19 @@ const ReadMoreWrapper = styled.div`
 
 `
 
-const ReadMore = styled.h1`
-  font-size:30px;
-  font-weight:200;
-  border:solid lightgray 1px;
+const ReadMore = styled.a`
+  font-size: 25px;
+  font-weight: 200;
+  border: solid lightgray 1px;
   border-radius: 5px;
-  padding:5px;
-
-`
+  padding: 5px;
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    background-color: lightgray;
+  }
+`;
 const Info = () =>{
   const latestInfo = LatestInfo.map((info)=>(
     <InfoDetails key={info.title}>
@@ -94,13 +99,20 @@ const Info = () =>{
         {latestInfo}
       </InfoSection>
       <ReadMoreWrapper>
-        <ReadMore>Read more</ReadMore>
+        <ReadMore href={"https://www.ghibli.jp/info/"} target={"_blank"}>
+          Read more
+        </ReadMore>
       </ReadMoreWrapper>
       <InfoSection>
         <InfoHeader>event information</InfoHeader>
         <InfoBreaker />
         {eventInfo}
       </InfoSection>
+      <ReadMoreWrapper>
+        <ReadMore href={"https://www.ghibli.jp/event/"} target={"_blank"}>
+          Read more
+        </ReadMore>
+      </ReadMoreWrapper>
     </InfoContainer>
   );
 }
