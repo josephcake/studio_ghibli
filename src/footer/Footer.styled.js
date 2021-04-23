@@ -34,10 +34,12 @@ const FooterListWrapper = styled.h1`
   font-weight: 300;
   letter-spacing: 1px;
   color: gray;
+  margin:5px 0;
 `;
 
+
 const FooterBanner = styled.img`
-  margin: 20px 0;
+  margin: 15px 0;
 `;
 
 export {

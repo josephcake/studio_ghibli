@@ -9,9 +9,6 @@ import {
   FooterBanner,
 } from './Footer.styled'
 
-
-
-
 const Footer = () =>{
   const catergoryMenu = CategoryMenu.map((data) => (
     <FooterListWrapper>      
