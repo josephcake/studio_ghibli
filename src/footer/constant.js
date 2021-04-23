@@ -75,4 +75,12 @@ const TravelExhibition = [
   },
 ];
 
-export {CategoryMenu, TravelExhibition}
+const RelatedSites = [
+  {title:"Ghibli Museum Mitaka", url:"https://www.ghibli-museum.jp/"},
+  {title:"Twitter official account", url:"https://twitter.com/JP_GHIBLI"},
+  {title:"LINE official account", url:"https://line.me/ti/p/%40studioghibli"},
+  {title:"Toshio Suzuki's Ghibli sweaty", url:"http://www.tfm.co.jp/asemamire/"},
+  {title:"Disney (Blu-ray / DVD)", url:"http://www.disney.co.jp/studio/ghibli.html"},
+]
+
+export {CategoryMenu, TravelExhibition, RelatedSites}
