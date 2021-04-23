@@ -4,39 +4,40 @@ import {
   FooterContainer,
   FooterSection,
   FooterHeader,
-  FooterList,
-  FooterListWrapper,
+  FooterItem,
+  FooterItemWrapper,
   FooterBanner,
-} from './Footer.styled'
+  FooterBannerItem
+} from "./Footer.styled";
 
 const Footer = () =>{
   const catergoryMenu = CategoryMenu.map((data) => (
-    <FooterListWrapper key={data.url}>
-      <FooterList href={data.url} target={"_blank"}>
+    <FooterItemWrapper key={data.url}>
+      <FooterItem href={data.url} target={"_blank"}>
         {data.title}
-      </FooterList>
-    </FooterListWrapper>
+      </FooterItem>
+    </FooterItemWrapper>
   ));
   const travelExhibition = TravelExhibition.map((data) => (
-    <FooterListWrapper key={data.url}>
-      <FooterList href={data.url} target={"_blank"}>
+    <FooterItemWrapper key={data.url}>
+      <FooterItem href={data.url} target={"_blank"}>
         {data.title}
-      </FooterList>
-    </FooterListWrapper>
+      </FooterItem>
+    </FooterItemWrapper>
   ));
 
   const relatedSites = RelatedSites.map((data) => (
-    <FooterListWrapper key={data.url}>
-      <FooterList href={data.url} target={"_blank"}>
+    <FooterItemWrapper key={data.url}>
+      <FooterItem href={data.url} target={"_blank"}>
         {data.title}
-      </FooterList>
-    </FooterListWrapper>
+      </FooterItem>
+    </FooterItemWrapper>
   ));
 
   const banner = FooterBanners.map((data) => (
-      <FooterList href={data.url} target={"_blank"} key={data.url}>
+      <FooterBannerItem href={data.url} target={"_blank"} key={data.url}>
         <FooterBanner src={data.src} />
-      </FooterList>
+      </FooterBannerItem>
   ));
 
   return (

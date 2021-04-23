@@ -19,7 +19,7 @@ const FooterHeader = styled.h1`
   font-weight: 400;
 `;
 
-const FooterList = styled.a`
+const FooterItem = styled.a`
   text-decoration: none;
   &:visited {
     color: gray;
@@ -28,8 +28,11 @@ const FooterList = styled.a`
     text-decoration: underline;
   }
 `;
+const FooterBannerItem = styled(FooterItem)`
+  margin:15px 0;
+`;
 
-const FooterListWrapper = styled.h1`
+const FooterItemWrapper = styled.h1`
   font-size: clamp(12px, 14px, 16px);
   font-weight: 300;
   letter-spacing: 1px;
@@ -39,14 +42,14 @@ const FooterListWrapper = styled.h1`
 
 
 const FooterBanner = styled.img`
-  margin: 15px 0;
 `;
 
 export {
   FooterContainer,
   FooterSection,
   FooterHeader,
-  FooterList,
-  FooterListWrapper,
+  FooterItem,
+  FooterItemWrapper,
   FooterBanner,
-}
+  FooterBannerItem,
+};
