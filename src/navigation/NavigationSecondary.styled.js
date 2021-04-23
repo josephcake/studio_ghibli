@@ -13,8 +13,8 @@ const NavigationBar = styled.div`
   /* background-color: palevioletred; */
   padding: 5px 0px;
   color: lightgray;
-  position: fixed;
-  bottom: 0;
+  position: sticky;
+  top: 0;
   display: flex;
   overflow-x: scroll;
 
@@ -39,7 +39,7 @@ const NavigationItem = styled.div`
   width: 200px;
   height: 100%;
   /* border-radius: 20px; */
-  margin: 0 10px;
+  /* margin: 0 10px; */
   display: flex;
   justify-content: center;
   align-items: center;

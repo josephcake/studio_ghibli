@@ -31,7 +31,7 @@ const LandingFooterText = styled.h1`
   font-weight: 200;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-left: 20px;
+  text-indent:20px;
 `;
 const LandingNewsContainer = styled.div`
   /* border: solid lightgray 1px; */

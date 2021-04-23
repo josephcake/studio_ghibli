@@ -9,6 +9,9 @@ const FooterContainer = styled.div`
   padding-top: 100px;
   padding-bottom: 20px;
   align-items:center;
+  @media (max-width:1000px){
+    display:none;
+  }
 `;
 const FooterMain = styled.div`
   width: 100%;

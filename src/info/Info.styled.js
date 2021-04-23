@@ -6,7 +6,7 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 100px 10px;
+  padding: 100px 0;
   flex-direction: column;
 `;
 const InfoSection = styled.div`

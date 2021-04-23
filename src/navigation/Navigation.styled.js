@@ -38,7 +38,7 @@ const NavigationItem = styled.div`
   height: 100%;
   /* border-bottom: solid 1px paleturquoise; */
   /* border-radius: 20px; */
-  margin:0 10px;
+  /* margin:0 10px; */
   display:flex;
   justify-content:center;
   align-items:center;
