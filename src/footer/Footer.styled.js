@@ -10,6 +10,17 @@ const FooterContainer = styled.div`
   padding-bottom: 20px;
   align-items:center;
 `;
+const FooterMain = styled.div`
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: space-evenly;
+`;
+
+const FooterSecondary = styled(FooterMain)`
+  padding-top: 50px;
+  width: 50%;
+`;
 
 const FooterSection = styled.div`
   display: flex;
@@ -43,9 +54,14 @@ const FooterItemWrapper = styled.h1`
   margin:5px 0;
 `;
 
-
 const FooterBanner = styled.img`
 `;
+const TermsAndCreditWrapper = styled(FooterItemWrapper)`
+  font-size: clamp(10px, 12px, 14px);
+  margin: 0;
+`;
+const TermsAndCreditItem = styled(FooterItem)``;
+
 
 export {
   FooterContainer,
@@ -55,4 +71,8 @@ export {
   FooterItemWrapper,
   FooterBanner,
   FooterBannerItem,
+  TermsAndCreditWrapper,
+  TermsAndCreditItem,
+  FooterMain,
+  FooterSecondary,
 };

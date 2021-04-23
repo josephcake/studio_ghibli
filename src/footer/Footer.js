@@ -9,32 +9,14 @@ import {
   FooterItem,
   FooterItemWrapper,
   FooterBanner,
-  FooterBannerItem
+  FooterBannerItem,
+  TermsAndCreditWrapper,
+  TermsAndCreditItem,
+  FooterMain,
+  FooterSecondary
 } from "./Footer.styled";
 
-const TermsAndCreditWrapper = styled.h1`
-  font-size: clamp(10px, 12px, 14px);
-  letter-spacing: 1px;
-  color: gray;
-  font-weight: 400;
-`; 
-const TermsAndCreditItem = styled.a`
 
-`
-const FooterMain = styled.div`
-  width: 100%;
-  background-color: rgb(230, 230, 230);
-  display: flex;
-  justify-content: space-evenly;
-`;
-
-const FooterSecondary = styled.div`
-  padding-top:50px;
-  width: 50%;
-  background-color: rgb(230, 230, 230);
-  display: flex;
-  justify-content: space-evenly;
-`;
 
 const Footer = () =>{
   const catergoryMenu = CategoryMenu.map((data) => (
