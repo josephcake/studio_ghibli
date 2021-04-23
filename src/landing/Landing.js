@@ -5,6 +5,7 @@ import {
   LandingFooterText,
   LandingNewsContainer,
   FeatureFilmWrapper,
+  FeatureFilm,
   NewsContainer,
   News,
   NewsTitle,
@@ -26,7 +27,10 @@ const Landing = () =>{
     <LandingContainer>
       <LandingNewsContainer >
         <NewsContainer>{news}</NewsContainer>
-        <FeatureFilmWrapper href={"https://www.aya-and-the-witch.jp/"} target={"_blank"} />
+        <FeatureFilmWrapper >
+
+        <FeatureFilm href={"https://www.aya-and-the-witch.jp/"} target={"_blank"} />
+        </FeatureFilmWrapper>
       </LandingNewsContainer>
       <LandingFooter>
         <LandingFooterText>studio ghibli</LandingFooterText>

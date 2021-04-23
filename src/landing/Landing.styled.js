@@ -14,6 +14,11 @@ const LandingContainer = styled.div`
   background-position: center;
   /* background-color: lightgray; */
   background-color: rgb(230, 230, 230);
+  @media (max-width:1000px){
+    height:100%;
+    background-position:top;
+  }
+  
 `;
 
 const LandingFooter = styled.div`
@@ -41,10 +46,19 @@ const LandingNewsContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-shrink: 2; */
+
+  @media (max-width: 1000px) {
+    flex-direction:column;
+    width:100vw;
+    padding:0;
+    padding-top: 70vh;
+  }
 `;
 
-const FeatureFilmWrapper = styled.a`
+const FeatureFilmWrapper = styled.div`  
+`;
+const FeatureFilm = styled.a`
+  display: block;
   background-color: black;
   height: 300px;
   width: 200px;
@@ -52,13 +66,17 @@ const FeatureFilmWrapper = styled.a`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: 1000px) {
+    height: 100vh;
+    width: 100vw;
+  }
 `;
 
 const NewsContainer = styled.div`
   min-width: 70%;
   height: 100%;
   display: flex;
-  flex-shrink: 1;
+  /* flex-shrink: 1; */
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
@@ -68,6 +86,12 @@ const News = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    padding: 15px 0;
+  }
 `;
 const NewsTitle = styled.a`
   font-weight: 400;
@@ -89,6 +113,11 @@ const NewsTitle = styled.a`
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
   }
+  @media (max-width: 1000px) {
+    font-size: clamp(32px, 35px, 37px);
+    padding: 10px 0; 
+    width: 80%;
+  }
 `;
 const NewsSubtitle = styled.h1`
   font-weight: 200;
@@ -98,6 +127,11 @@ const NewsSubtitle = styled.h1`
   width: 75%;
   padding: 10px;
   margin: 0;
+  @media (max-width: 1000px) {
+    font-size: clamp(32px, 35px, 37px);
+    padding: 10px 0;
+    width: 80%;
+  }
 `;
 
 export {
@@ -106,6 +140,7 @@ export {
   LandingFooterText,
   LandingNewsContainer,
   FeatureFilmWrapper,
+  FeatureFilm,
   NewsContainer,
   News,
   NewsTitle,
