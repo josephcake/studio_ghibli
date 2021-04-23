@@ -45,7 +45,7 @@ const LandingNewsContainer = styled.div`
   /* flex-shrink: 2; */
 `;
 
-const FeatureFilmContainer = styled.a`
+const FeatureFilmWrapper = styled.a`
   background-color:black;
   height:300px;
   width:200px;
@@ -112,7 +112,7 @@ const Landing = () =>{
     <LandingContainer>
       <LandingNewsContainer>
         <NewsContainer>{news}</NewsContainer>
-        <FeatureFilmContainer href={"https://www.aya-and-the-witch.jp/"} target={"_blank"} />
+        <FeatureFilmWrapper href={"https://www.aya-and-the-witch.jp/"} target={"_blank"} />
       </LandingNewsContainer>
       <LandingFooter>
         <LandingFooterText>studio ghibli</LandingFooterText>
