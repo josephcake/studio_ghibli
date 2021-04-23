@@ -11,14 +11,14 @@ import {
 
 const Footer = () =>{
   const catergoryMenu = CategoryMenu.map((data) => (
-    <FooterListWrapper>      
+    <FooterListWrapper key={data.url}>
       <FooterList href={data.url} target={"_blank"}>
         {data.title}
       </FooterList>
     </FooterListWrapper>
   ));
   const travelExhibition = TravelExhibition.map((data) => (
-    <FooterListWrapper>
+    <FooterListWrapper key={data.url}>
       <FooterList href={data.url} target={"_blank"}>
         {data.title}
       </FooterList>
@@ -26,7 +26,7 @@ const Footer = () =>{
   ));
 
   const relatedSites = RelatedSites.map((data) => (
-    <FooterListWrapper>
+    <FooterListWrapper key={data.url}>
       <FooterList href={data.url} target={"_blank"}>
         {data.title}
       </FooterList>
@@ -34,9 +34,9 @@ const Footer = () =>{
   ));
 
   const banner = FooterBanners.map((data) => (
-    <FooterList href={data.href} target={"_blank"}>
-      <FooterBanner src={data.src} />
-    </FooterList>
+      <FooterList href={data.url} target={"_blank"} key={data.url}>
+        <FooterBanner src={data.src} />
+      </FooterList>
   ));
 
   return (
