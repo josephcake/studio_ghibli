@@ -92,6 +92,7 @@ const ReadMore = styled.a`
   @media (max-width: 1000px) {
     font-size: 45px;
     padding:10px;
+    background-color:powderblue;
   }
 `;
 

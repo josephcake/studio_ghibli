@@ -117,8 +117,8 @@ const NewsTitle = styled.a`
     background-color: rgba(0, 0, 0, 0.7);
   }
   @media (max-width: 1000px) {
-    font-size: clamp(32px, 35px, 37px);
-    padding: 10px 0; 
+    font-size: clamp(30px, 35px, 40px);
+    padding: 10px 0;
     width: 80%;
   }
 `;
@@ -131,7 +131,7 @@ const NewsSubtitle = styled.h1`
   padding: 10px;
   margin: 0;
   @media (max-width: 1000px) {
-    font-size: clamp(32px, 35px, 37px);
+    font-size: clamp(30px, 35px, 40px);
     padding: 10px 0;
     width: 80%;
   }

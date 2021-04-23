@@ -60,12 +60,12 @@ const Footer = () =>{
           <FooterHeader>Related Sites</FooterHeader>
           {relatedSites}
         </FooterSection>
-        <FooterSection>{banner}</FooterSection>
+        <FooterSection className={"footerBanner"}>{banner}</FooterSection>
       </FooterMain>
       <FooterSecondary>
           <TermsAndCreditWrapper>
             <TermsAndCreditItem>
-              © 2005-2021 STUDIO GHIBLI Inc
+              © 2021 STUDIO GHIBLI
             </TermsAndCreditItem>
           </TermsAndCreditWrapper>
           <TermsAndCreditWrapper>

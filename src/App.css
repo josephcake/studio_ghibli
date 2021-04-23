@@ -15,3 +15,11 @@ a:visited{
 .slider-container {
   height:80% !important;
 }
+
+/* @media only screen and (max-width: 1000px){
+  .footerBanner{
+     flex-direction: row !important;
+     flex-wrap:wrap; 
+
+  }
+} */
