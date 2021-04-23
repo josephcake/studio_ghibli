@@ -4,8 +4,11 @@ const FooterContainer = styled.div`
   width: 100vw;
   background-color: rgb(230, 230, 230);
   display: flex;
+  flex-direction:column;
   justify-content: space-evenly;
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  align-items:center;
 `;
 
 const FooterSection = styled.div`

@@ -32,16 +32,16 @@ const Navigation = () =>{
             </NavigationItemText>
           </NavigationItem>
           <NavigationItem>
-            <NavigationItemText>characters</NavigationItemText>
+            <NavigationItemText>Latest Info</NavigationItemText>
           </NavigationItem>
           <NavigationItem>
-            <NavigationItemText>locations</NavigationItemText>
+            <NavigationItemText>Event Info</NavigationItemText>
           </NavigationItem>
           <NavigationItem>
-            <NavigationItemText>species</NavigationItemText>
+            <NavigationItemText>Museum</NavigationItemText>
           </NavigationItem>
           <NavigationItem>
-            <NavigationItemText>vehicles</NavigationItemText>
+            <NavigationItemText>Theme Park</NavigationItemText>
           </NavigationItem>
         </NavigationItemContainer>
         <NavigationItemContainer>
