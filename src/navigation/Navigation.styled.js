@@ -34,11 +34,9 @@ const NavigationItemContainer = styled.div`
   align-items:center;
 `;
 const NavigationItem = styled.div`
-  width: 100px;
+  width: auto;
+  margin:0 15px;
   height: 100%;
-  /* border-bottom: solid 1px paleturquoise; */
-  /* border-radius: 20px; */
-  /* margin:0 10px; */
   display:flex;
   justify-content:center;
   align-items:center;
@@ -56,7 +54,7 @@ const Logo = styled.div`
   align-items: flex-start;
   /* border: solid 1px yellow; */
   width: max-content;
-  height: 100%;
+  /* height: 100%; */
 `;
 const LogoJapanese = styled.h1`
   font-size: clamp(10px, 15px, 18px);
