@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
-import {CategoryMenu, TravelExhibition} from './constant'
+import {CategoryMenu, TravelExhibition, RelatedSites} from './constant'
 
 const FooterContainer = styled.div`
   width: 100vw;
@@ -52,6 +52,14 @@ const Footer = () =>{
       </FooterList>
     </FooterListWrapper>
   ));
+
+  const relatedSites = RelatedSites.map((data) => (
+    <FooterListWrapper>
+      <FooterList href={data.url} target={"_blank"}>
+        {data.title}
+      </FooterList>
+    </FooterListWrapper>
+  ));
   return (
     <FooterContainer>
       <FooterSection>
@@ -61,7 +69,8 @@ const Footer = () =>{
       <FooterSection>
         <FooterHeader>Travel Exhibition</FooterHeader>
         {travelExhibition}
-        <FooterHeader>Category Menu</FooterHeader>
+        <FooterHeader>Related Sites</FooterHeader>
+        {relatedSites}
       </FooterSection>
     </FooterContainer>
   );
