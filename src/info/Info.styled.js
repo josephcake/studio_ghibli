@@ -79,20 +79,21 @@ const ReadMoreWrapper = styled.div`
 
 const ReadMore = styled.a`
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 400;
   border: solid lightgray 1px;
   border-radius: 5px;
-  padding: 5px;
+  padding: 10px;
+  background-color: black;
+  color: white;
   &:visited {
-    color: black;
+    color: white;
   }
   &:hover {
     background-color: lightgray;
   }
   @media (max-width: 1000px) {
     font-size: 45px;
-    padding:10px;
-    background-color:powderblue;
+    padding: 15px;
   }
 `;
 
