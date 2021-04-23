@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
 
 import {CategoryMenu, TravelExhibition, RelatedSites, FooterBanners} from './constant'
 import {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import {
   NavigationBar,
@@ -8,10 +8,9 @@ import {
   NavigationItemText,
   Logo,
   LogoJapanese,
-} from "./Navigation.styled.js";
+} from "./NavigationSecondary.styled.js";
 
-
-const Navigation = () =>{
+const NavigationSecondary = () => {
   return (
     <NavigationBar>
       <NavigationBarInterior>
@@ -44,7 +43,7 @@ const Navigation = () =>{
             <NavigationItemText>Theme Park</NavigationItemText>
           </NavigationItem>
         </NavigationItemContainer>
-        
+
         <NavigationItemContainer>
           <NavigationItem>
             <NavigationItemText>Twitter</NavigationItemText>
@@ -56,5 +55,5 @@ const Navigation = () =>{
       </NavigationBarInterior>
     </NavigationBar>
   );
-}
-export default Navigation
+};
+export default NavigationSecondary;

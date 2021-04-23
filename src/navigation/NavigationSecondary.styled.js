@@ -9,44 +9,44 @@ const NavigationBar = styled.div`
   width: 100vw;
   height: 40px;
   /* background-color: rgba(20, 20, 20, 0.9); */
-  background-color: black;
+  /* background-color: black; */
+  background-color: blue;
   /* background-color: #838383; */
   padding: 5px 0px;
-  color:lightgray;
-  position:sticky;
-  top:0;
-  @media (max-width:1000px){
-    display:none;    
+  color: lightgray;
+  position: sticky;
+  top: 0;
+  @media (min-width: 1000px) {
+    display: none;
   }
 `;
 const NavigationBarInterior = styled(ParentDiv)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;  
+  align-items: center;
 `;
-const NavigationLogoContainer = styled(ParentDiv)`
-`;
+const NavigationLogoContainer = styled(ParentDiv)``;
 const NavigationItemContainer = styled.div`
   display: flex;
   flex-direction: row;
   /* justify-content: flex-start; */
-  align-items:center;
+  align-items: center;
 `;
 const NavigationItem = styled.div`
   width: 100px;
   height: 100%;
   /* border-bottom: solid 1px paleturquoise; */
   /* border-radius: 20px; */
-  margin:0 10px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 const NavigationItemText = styled.h1`
   font-size: clamp(10px, 15px, 18px);
-  text-transform:capitalize;
+  text-transform: capitalize;
 `;
 const Logo = styled.div`
   cursor: pointer;
@@ -71,7 +71,8 @@ const LogoEnglish = styled.h1`
   font-size: clamp(5px, 12px, 15px);
 `;
 
-export {NavigationBar,
+export {
+  NavigationBar,
   NavigationBarInterior,
   NavigationLogoContainer,
   NavigationItemContainer,
@@ -79,5 +80,5 @@ export {NavigationBar,
   NavigationItemText,
   Logo,
   LogoJapanese,
-  LogoEnglish
-}
+  LogoEnglish,
+};
