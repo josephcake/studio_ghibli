@@ -8,6 +8,7 @@ import {
   NavigationItemText,
   Logo,
   LogoJapanese,
+  LogoEnglish,
 } from "./NavigationSecondary.styled.js";
 
 const NavigationSecondary = () => {
@@ -19,8 +20,8 @@ const NavigationSecondary = () => {
             <NavigationItemText>
               <Link to="/">
                 <Logo>
-                  <LogoJapanese>スタジオジブリ作品</LogoJapanese>
-                  {/* <LogoEnglish>STUDIO GHIBLI</LogoEnglish> */}
+                  {/* <LogoJapanese>スタジオジブリ作品</LogoJapanese> */}
+                  <LogoEnglish>SG</LogoEnglish>
                 </Logo>
               </Link>
             </NavigationItemText>
@@ -42,9 +43,6 @@ const NavigationSecondary = () => {
           <NavigationItem>
             <NavigationItemText>Theme Park</NavigationItemText>
           </NavigationItem>
-        </NavigationItemContainer>
-
-        <NavigationItemContainer>
           <NavigationItem>
             <NavigationItemText>Twitter</NavigationItemText>
           </NavigationItem>
