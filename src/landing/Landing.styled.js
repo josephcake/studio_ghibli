@@ -55,7 +55,10 @@ const LandingNewsContainer = styled.div`
   }
 `;
 
-const FeatureFilmWrapper = styled.div`  
+const FeatureFilmWrapper = styled.div`
+  @media (max-width: 1000px) {
+    padding-top: 50px;
+  }
 `;
 const FeatureFilm = styled.a`
   display: block;
