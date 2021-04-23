@@ -6,10 +6,10 @@ import Info from '../info/Info'
 const HomeContainer = styled.div`  
 `
 
-const NavSpacer = styled.div`
-  height: 80px;
-  width: 100%;
-`;
+// const NavSpacer = styled.div`
+//   height: 80px;
+//   width: 100%;
+// `;
 
 const Home = () =>{
   return (

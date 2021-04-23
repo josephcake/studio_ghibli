@@ -6,13 +6,14 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  padding: 100px 10px;
   flex-direction: column;
 `;
 const InfoSection = styled.div`
   width: 60%;
   height: auto;
-  margin: 20px 0;
+  margin-top: 50px;
+  margin-bottom: 20px;
 `;
 const InfoHeader = styled.h1`
   /* font-size:30px; */

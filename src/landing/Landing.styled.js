@@ -12,7 +12,8 @@ const LandingContainer = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  background-color: lightgray;
+  /* background-color: lightgray; */
+  background-color: rgb(230, 230, 230);
 `;
 
 const LandingFooter = styled.div`
