@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {posters, filmInfo} from './constant'
 
 const PosterContainer = styled.div`
 
