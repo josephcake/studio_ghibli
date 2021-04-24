@@ -1,4 +1,5 @@
 import arrietty from "./assets/poster_arrietty.jpg";
+import graves_fireflies from "./assets/poster_graves_fireflies.jpg";
 import cat_returns from "./assets/poster_cat_returns.jpg";
 import earthsea from "./assets/poster_earthsea.jpg";
 import earwig_witch from "./assets/poster_earwig_witch.jpg";
@@ -20,7 +21,6 @@ import spirited_away from "./assets/poster_spirited_away.jpg";
 import whisper_heart from "./assets/poster_whisper_heart.jpg";
 import wind_rises from "./assets/poster_wind_rises.jpg";
 import yamadas from "./assets/poster_yamadas.jpg";
-import graves_fireflies from "./assets/poster_graves_fireflies.jpg";
 
 
 
@@ -50,6 +50,7 @@ const graves_fireflies_poster = graves_fireflies;
 
 const filmInfo = [
   {
+    id:0,
     title: "Nausicaa of the Valley of the Wind",
     url: "6zhLBe319KE",
     year: "1984",
@@ -60,6 +61,7 @@ const filmInfo = [
     poster:nausicaa_poster,
   },
   {
+    id:1,
     title: "Laputa: Castle In The Sky",
     url: "8ykEy-yPBFc",
     year: "1986",
@@ -70,6 +72,7 @@ const filmInfo = [
     poster:laputa_castle_poster,
   },
   {
+    id:2,
     title: "Grave of the Fireflies",
     url: "4vPeTSRd580",
     year: "1988",
@@ -80,6 +83,7 @@ const filmInfo = [
     poster:graves_fireflies_poster,
   },
   {
+    id:3,
     title: "My Neighbor Totoro",
     url: "92a7Hj0ijLs",
     year: "1988",
@@ -90,6 +94,7 @@ const filmInfo = [
     poster:my_neighbor_totoro_poster,
   },
   {
+    id:4,
     title: "Kiki's Delivery Service",
     url: "4bG17OYs-GA",
     year: "1989",
@@ -100,6 +105,7 @@ const filmInfo = [
     poster:kiki_delivery_poster,
   },
   {
+    id:5,
     title: "Only Yesterday",
     url: "OfkQlZArxw0",
     year: "1991",
@@ -110,6 +116,7 @@ const filmInfo = [
     poster:only_yesterday_poster,
   },
   {
+    id:6,
     title: "Porco Rosso",
     url: "awEC-aLDzjs",
     year: "1992",
@@ -120,6 +127,7 @@ const filmInfo = [
     poster:porco_rosso_poster,
   },
   {
+    id:7,
     title: "Ocean Waves",
     url: "VciuDweg61c",
     year: "1993",
@@ -130,6 +138,7 @@ const filmInfo = [
     poster:ocean_waves_poster,
   },
   {
+    id:8,
     title: "Pom Poko",
     url: "_7cowIHjCD4",
     year: "1994",
@@ -140,6 +149,7 @@ const filmInfo = [
     poster:pom_poko_poster,
   },
   {
+    id:9,
     title: "Whisper of the Heart",
     url: "0pVkiod6V0U",
     year: "1995",
@@ -150,6 +160,7 @@ const filmInfo = [
     poster:whisper_heart_poster,
   },
   {
+    id:10,
     title: "Princess Mononoke",
     url: "4OiMOHRDs14",
     year: "1997",
@@ -160,6 +171,7 @@ const filmInfo = [
     poster:princess_mononoke_poster,
   },
   {
+    id:11,
     title: "My Neighbors the Yamadas",
     url: "1C9ujuCPlnY",
     year: "1999",
@@ -170,6 +182,7 @@ const filmInfo = [
     poster:yamadas_poster,
   },
   {
+    id:12,
     title: "Spirited Away",
     url: "ByXuk9QqQkk",
     year: "2001",
@@ -180,6 +193,7 @@ const filmInfo = [
     poster:spirited_away_poster,
   },
   {
+    id:13,
     title: "The Cat Returns",
     url: "Gp-H_YOcYTM",
     year: "2002",
@@ -190,6 +204,7 @@ const filmInfo = [
     poster:cat_returns_poster,
   },
   {
+    id:14,
     title: "Howl's Moving Castle",
     url: "iwROgK94zcM",
     year: "2004",
@@ -200,6 +215,7 @@ const filmInfo = [
     poster:howls_castle_poster,
   },
   {
+    id:15,
     title: "Tales From Earthsea",
     url: "8hxYx3Jq3kI",
     year: "2006",
@@ -210,6 +226,7 @@ const filmInfo = [
     poster:earthsea_poster,
   },
   {
+    id:16,
     title: "Ponyo",
     url: "CsR3KVgBzSM",
     year: "2008",
@@ -220,6 +237,7 @@ const filmInfo = [
     poster:ponyo_poster,
   },
   {
+    id:17,
     title: "Arrietty",
     url: "9CtIXPhPo0g",
     year: "2010",
@@ -230,6 +248,7 @@ const filmInfo = [
     poster:arrietty_poster,
   },
   {
+    id:18,
     title: "From Up On Poppy Hill",
     url: "9nzpk_Br6yo",
     year: "2011",
@@ -240,6 +259,7 @@ const filmInfo = [
     poster:poppy_hill_poster,
   },
   {
+    id:19,
     title: "The Wind Rises",
     url: "2QFBZgAZx7g",
     year: "2013",
@@ -250,6 +270,7 @@ const filmInfo = [
     poster:wind_rises_poster,
   },
   {
+    id:20,
     title: "The Tale of The Princess Kaguya",
     url: "tM6hcHp0_kU",
     year: "2013",
@@ -260,6 +281,7 @@ const filmInfo = [
     poster:kaguya_poster,
   },
   {
+    id:21,
     title: "When Marnie Was There",
     url: "PZq4uuMP8ss",
     year: "2014",
@@ -270,6 +292,7 @@ const filmInfo = [
     poster:marnie_poster,
   },
   {
+    id:22,
     title: "Earwig and The Witch",
     url: "j5YJsCDlTDA",
     year: "2014",

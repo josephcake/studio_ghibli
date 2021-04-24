@@ -56,7 +56,7 @@ const Arrow = styled.h1`
 `
 
 
-
+// Youtube
 const YoutubeVid = styled.div`
   height: calc(100vh - 360px);
   width: 100vw;
@@ -72,6 +72,11 @@ const Overlay = styled.div`
   z-index: 9999999;
 `;
 
+const PosterInfoContainer = styled.div`
+  height:100vh;
+  width:100vw;
+`
+
 const Films = () => {
   const p = posters.map((img)=>(
     <Poster img={img}/>
@@ -79,7 +84,9 @@ const Films = () => {
   const vidRef = createRef();
   const iframeRef = createRef();
   const [vidDimension, setVidDimension] = useState({ h: 0, w: 0 });
-  // const randomlySelectedVid = Math.floor(Math.random() * filmInfo.length - 1);
+  const [currentVid, setCurrentVid] = useState(
+    "uBnRTMGRMkM"
+  );
 
   useEffect(() => {
     const h = vidRef.current.offsetHeight.toString();
@@ -99,7 +106,7 @@ const Films = () => {
           width={vidDimension.w}
           height={vidDimension.h}
           // src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
-          src={`https://www.youtube-nocookie.com/embed/uBnRTMGRMkM?playlist=uBnRTMGRMkM&autoplay=1&mute=1&showinfo=0&controls=1&loop=1`}
+          src={`https://www.youtube-nocookie.com/embed/${currentVid}?playlist=${currentVid}&autoplay=1&mute=1&showinfo=0&controls=1&loop=1`}
           title="YouTube video player"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -116,6 +123,12 @@ const Films = () => {
         </RArrowContainer>
         <PosterContainer>{p}</PosterContainer>
       </FilmsContainer>
+      
+      <PosterInfoContainer>
+      
+      </PosterInfoContainer>        
+
+
     </MediaContainer>
   );
 }
