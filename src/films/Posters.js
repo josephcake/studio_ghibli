@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import {posters, filmInfo} from './constant'
 
 const PosterContainer = styled.div`
   cursor: pointer;
@@ -14,9 +13,9 @@ const PosterImg = styled.img`
   object-position:center;
 `
 
-const Poster = ({img}) =>{
+const Poster = ({img, film, setCurrentFilm }) =>{  
   return (
-  <PosterContainer>
+  <PosterContainer onClick={()=>setCurrentFilm(film)}>
     <PosterImg src={img}/>
   </PosterContainer>
   )

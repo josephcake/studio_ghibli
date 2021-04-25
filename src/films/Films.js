@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { posters, filmInfo } from "./constant";
 
 import Poster from './Posters'
+import PosterInfo from './PosterInfo'
 
 
 const MediaContainer = styled.div`  
@@ -71,22 +72,19 @@ const Overlay = styled.div`
   display: block;
   z-index: 9999999;
 `;
-
-const PosterInfoContainer = styled.div`
-  height:100vh;
-  width:100vw;
-`
+const handleFilm = (f) => {
+  console.log(f);
+};
 
 const Films = () => {
-  const p = posters.map((img)=>(
-    <Poster img={img}/>
-  ))
+  
   const vidRef = createRef();
   const iframeRef = createRef();
   const [vidDimension, setVidDimension] = useState({ h: 0, w: 0 });
   const [currentVid, setCurrentVid] = useState(
     "uBnRTMGRMkM"
   );
+  const [currentFilm, setCurrentFilm] = useState(null)
 
   useEffect(() => {
     const h = vidRef.current.offsetHeight.toString();
@@ -95,8 +93,11 @@ const Films = () => {
       ...prevState,
       h,
       w,
-    }));
+    }));    
   }, []);
+
+  const p = filmInfo.map((f) => <Poster key={f.url} setCurrentFilm={setCurrentFilm} img={f.poster} film={f} />);
+
   return (
     <MediaContainer>
       <YoutubeVid ref={vidRef}>
@@ -122,13 +123,9 @@ const Films = () => {
           <Arrow>{">"}</Arrow>
         </RArrowContainer>
         <PosterContainer>{p}</PosterContainer>
-      </FilmsContainer>
-      
-      <PosterInfoContainer>
-      
-      </PosterInfoContainer>        
+      </FilmsContainer>      
 
-
+      <PosterInfo film={currentFilm}/>
     </MediaContainer>
   );
 }
