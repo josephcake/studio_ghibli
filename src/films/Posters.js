@@ -13,9 +13,14 @@ const PosterImg = styled.img`
   object-position:center;
 `
 
-const Poster = ({img, film, setCurrentFilm }) =>{  
+const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{  
+  const handleFilm = (f) =>{
+    setCurrentVid(f.url)
+    setCurrentFilm(f)
+  }
+
   return (
-  <PosterContainer onClick={()=>setCurrentFilm(film)}>
+  <PosterContainer onClick={()=>handleFilm(film)}>
     <PosterImg src={img}/>
   </PosterContainer>
   )

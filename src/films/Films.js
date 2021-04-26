@@ -86,6 +86,7 @@ const Films = () => {
   );
   const [currentFilm, setCurrentFilm] = useState(null)
 
+
   useEffect(() => {
     const h = vidRef.current.offsetHeight.toString();
     const w = vidRef.current.offsetWidth.toString();
@@ -96,7 +97,7 @@ const Films = () => {
     }));    
   }, []);
 
-  const p = filmInfo.map((f) => <Poster key={f.url} setCurrentFilm={setCurrentFilm} img={f.poster} film={f} />);
+  const p = filmInfo.map((f) => <Poster key={f.url} setCurrentVid={setCurrentVid} setCurrentFilm={setCurrentFilm} img={f.poster} film={f} />);
 
   return (
     <MediaContainer>
