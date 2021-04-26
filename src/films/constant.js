@@ -22,8 +22,6 @@ import whisper_heart from "./assets/poster_whisper_heart.jpg";
 import wind_rises from "./assets/poster_wind_rises.jpg";
 import yamadas from "./assets/poster_yamadas.jpg";
 
-
-
 const arrietty_poster = arrietty;
 const cat_returns_poster = cat_returns;
 const earthsea_poster = earthsea;

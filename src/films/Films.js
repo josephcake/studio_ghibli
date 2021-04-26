@@ -139,6 +139,7 @@ const Films = () => {
       </FilmsContainer>
       {currentFilm ? (
         <Modal
+          setCurrentFilm={setCurrentFilm}
           child={
             <PosterInfo
               ref={iframeRef}
