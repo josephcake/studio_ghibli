@@ -53,22 +53,20 @@ const TitleText = styled.h1`
 const PosterInfo = ({film}) =>{
   return film ? (
     <PosterInfoContainer>
-
       <TitleYearHeader>
         <TitleText>{film.title}</TitleText>
       </TitleYearHeader>
-      
+      {/* <PosterDetails>
+        <Info>Year: {film.year}</Info>
+        <Info>Director: {film.director}</Info>
+        <Info>Screen Writers: {film.screenWriters}</Info>
+        <Info>Producers: {film.producers}</Info>
+        <Info>Music: {film.music}</Info>
+      </PosterDetails> */}
       <Overview>
         <PosterImg>
           <Img src={film.poster} />
         </PosterImg>
-        <PosterDetails>
-          <Info>Year: {film.year}</Info>
-          <Info>Director: {film.director}</Info>
-          <Info>Screen Writers: {film.screenWriters}</Info>
-          <Info>Producers: {film.producers}</Info>
-          <Info>Music: {film.music}</Info>
-        </PosterDetails>
       </Overview>
     </PosterInfoContainer>
   ) : null;
