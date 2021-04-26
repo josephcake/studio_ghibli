@@ -53,9 +53,11 @@ const TitleText = styled.h1`
 const PosterInfo = ({film}) =>{
   return film ? (
     <PosterInfoContainer>
+
       <TitleYearHeader>
         <TitleText>{film.title}</TitleText>
       </TitleYearHeader>
+      
       <Overview>
         <PosterImg>
           <Img src={film.poster} />

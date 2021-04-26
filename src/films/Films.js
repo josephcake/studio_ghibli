@@ -101,7 +101,15 @@ const Films = () => {
     }));    
   }, []);
 
-  const p = filmInfo.map((f) => <Poster key={f.url} setCurrentVid={setCurrentVid} setCurrentFilm={setCurrentFilm} img={f.poster} film={f} />);
+  const p = filmInfo.map((f) => 
+    <Poster 
+      key={f.url} 
+      setCurrentVid={setCurrentVid} 
+      setCurrentFilm={setCurrentFilm} 
+      img={f.poster} 
+      film={f} 
+    />
+  );
 
   return (
     <MediaContainer>
@@ -112,7 +120,7 @@ const Films = () => {
           width={vidDimension.w}
           height={vidDimension.h}
           // src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
-          src={`https://www.youtube-nocookie.com/embed/${currentVid}?playlist=${currentVid}&autoplay=1&mute=1&showinfo=0&controls=1&loop=1`}
+          src={`https://www.youtube-nocookie.com/embed/${currentVid}?playlist=${currentVid}&autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
           title="YouTube video player"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -128,17 +136,19 @@ const Films = () => {
           <Arrow>{">"}</Arrow>
         </RArrowContainer>
         <PosterContainer>{p}</PosterContainer>
-      </FilmsContainer>      
-      {
-        currentFilm?
+      </FilmsContainer>
+      {currentFilm ? (
         <Modal
           child={
-            <PosterInfo film={currentFilm}/>
+            <PosterInfo
+              ref={iframeRef}
+              width={vidDimension.w}
+              height={vidDimension.h}
+              film={currentFilm}
+            />
           }
-        >
-        </Modal>
-        :null
-      }
+        ></Modal>
+      ) : null}
     </MediaContainer>
   );
 }

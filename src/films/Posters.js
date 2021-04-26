@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 const PosterContainer = styled.div`
-  cursor: pointer;
   margin: 0 10px;
   position: relative;
   &:hover img {
@@ -27,6 +26,7 @@ const PosterImg = styled.img`
 `;
 
 const PosterDetailContainer = styled.div`
+  
   border-radius: 8px;
   display: none;
   position: absolute;
@@ -36,7 +36,7 @@ const PosterDetailContainer = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   width: 400px;
-  padding:0 10px;
+  padding: 0 10px;
 `;
 const DetailTitle = styled.h1`
   font-size:clamp(20px,22px,25px);
@@ -60,33 +60,56 @@ const DetailInfoRated = styled.h3`
   border: solid white 4px;
   padding: 2px;
 `;
+
+const DetailInfoButton = styled.div`
+  cursor: pointer;
+  background-color: rgb(70, 70, 70);
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 700;
+  &:nth-child(2) {
+    margin: 0 10px;
+  }
+  /* &:last-child {
+    margin-left: 0 10px;
+  } */
+`;
+
+
 const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{  
-  const handleFilm = (f) =>{    
-    // setCurrentVid(f.url) ///changes the trailer vid
+  const handleSummary = (f)=>{
     setCurrentFilm(f)
   }  
+  const handleTrailer = (f) =>{    
+    setCurrentVid(f.url)
+  }
 
   return (
-  <PosterContainer onClick={()=>handleFilm(film)}>
-    <PosterImg src={img}>
-    </PosterImg>
-    <PosterDetailContainer className={"poster_detail_container"}> 
-      <DetailTitle>
-        {film.title}
-      </DetailTitle>
-      <DetailInfo>
-        <DetailInfoRated>{film.rated}</DetailInfoRated>
-        <DetailInfoText>{film.screenTime}</DetailInfoText>
-        <DetailInfoText>{film.year}</DetailInfoText>
-        <DetailInfoText>HBO MAX</DetailInfoText>
-      </DetailInfo>
-      <DetailInfo>
-        <button>trailer</button>
-        <button>watch options</button>
-      </DetailInfo>
-    </PosterDetailContainer>
-  </PosterContainer>
-  )
+    <PosterContainer>
+      <PosterImg src={img}></PosterImg>
+      <PosterDetailContainer className={"poster_detail_container"}>
+        <DetailTitle>{film.title}</DetailTitle>
+        <DetailInfo>
+          <DetailInfoRated>{film.rated}</DetailInfoRated>
+          <DetailInfoText>{film.screenTime}</DetailInfoText>
+          <DetailInfoText>{film.year}</DetailInfoText>
+          <DetailInfoText>HBO MAX</DetailInfoText>
+        </DetailInfo>
+        <DetailInfo>
+          <DetailInfoButton onClick={() => handleSummary(film)}>
+            summary
+          </DetailInfoButton>
+          <DetailInfoButton onClick={() => handleTrailer(film)}>
+            trailer
+          </DetailInfoButton>
+          <DetailInfoButton>watch options</DetailInfoButton>
+        </DetailInfo>
+      </PosterDetailContainer>
+    </PosterContainer>
+  );
 }
 
 export default Poster
