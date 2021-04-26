@@ -12,7 +12,7 @@ const Overlay = styled.div`
   right: 0;
   /* background-color: rgba(0, 0, 0, 0.6); */
   background-color: white;
-  /* display:none; */
+  display:none;
 `;
 
 export { Overlay };

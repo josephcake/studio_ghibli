@@ -27,6 +27,7 @@ const PosterContainer = styled.div`
   display: flex;
   align-items: center;
   overflow-x: scroll;  
+  margin: 0 50px;
 `;
 
 const LArrowContainer = styled.div`

@@ -6,14 +6,14 @@ const PosterContainer = styled.div`
   margin: 0 10px;
   position: relative;
   &:hover img {
-    transition: width 1s 0.3s ease-in-out;
-    width: 400px;
+    transition: width 1s 0.2s ease;
+    width: 400px;    
   }
   &:hover .poster_detail_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: all 1s 0.3s ease-in-out;
+    transition: all 1s 0.2s ease;
   }
 `;
 
@@ -23,7 +23,7 @@ const PosterImg = styled.img`
   width: 200px;
   object-fit: cover;
   object-position: center;
-  transition: width 1s 0.3s ease-in-out;
+  transition: width 1s 0.2s ease;
 `;
 
 const PosterDetailContainer = styled.div`
@@ -62,7 +62,7 @@ const DetailInfoRated = styled.h3`
 `;
 const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{  
   const handleFilm = (f) =>{    
-    setCurrentVid(f.url)
+    // setCurrentVid(f.url) ///changes the trailer vid
     setCurrentFilm(f)
   }  
 
@@ -79,6 +79,10 @@ const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{
         <DetailInfoText>{film.screenTime}</DetailInfoText>
         <DetailInfoText>{film.year}</DetailInfoText>
         <DetailInfoText>HBO MAX</DetailInfoText>
+      </DetailInfo>
+      <DetailInfo>
+        <button>trailer</button>
+        <button>watch options</button>
       </DetailInfo>
     </PosterDetailContainer>
   </PosterContainer>
