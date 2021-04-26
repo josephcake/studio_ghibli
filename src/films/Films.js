@@ -1,5 +1,6 @@
 import React, { createRef, useEffect, useState } from "react";
 import styled from "styled-components";
+import Modal from '../modal/Modal'
 import { posters, filmInfo } from "./constant";
 
 import Poster from './Posters'
@@ -38,7 +39,7 @@ const LArrowContainer = styled.div`
   position: absolute;
   width:30px;
   left: 0;
-  z-index:9999999;
+  z-index:9;
 `;
 const RArrowContainer = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const RArrowContainer = styled.div`
   position: absolute;
   width: 30px;
   right: 0;
-  z-index: 9999999;
+  z-index: 9;
 `;
 
 const Arrow = styled.h1`
@@ -127,8 +128,16 @@ const Films = () => {
         </RArrowContainer>
         <PosterContainer>{p}</PosterContainer>
       </FilmsContainer>      
-
-      <PosterInfo film={currentFilm}/>
+      {
+        currentFilm?
+        <Modal
+          child={
+            <PosterInfo film={currentFilm}/>
+          }
+        >
+        </Modal>
+        :null
+      }
     </MediaContainer>
   );
 }

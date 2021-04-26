@@ -59,6 +59,8 @@ const filmInfo = [
     producers: ["Isao Takahata"],
     music: "Joe Hisaishi",
     poster: nausicaa_poster,
+    screenTime: "1h 57m",
+    rated: "PG",
   },
   {
     id: 2,
@@ -70,6 +72,8 @@ const filmInfo = [
     producers: ["Isao Takahata"],
     music: "Joe Hisaishi",
     poster: laputa_castle_poster,
+    screenTime: "2h 6m",
+    rated: "PG",
   },
   {
     id: 3,
@@ -81,6 +85,8 @@ const filmInfo = [
     producers: ["Tōru Hara"],
     music: "Michio Mamiya",
     poster: graves_fireflies_poster,
+    screenTime: "1h 33m",
+    rated: "PG",
   },
   {
     id: 4,
@@ -92,6 +98,8 @@ const filmInfo = [
     producers: ["Tōru Hara"],
     music: "Joe Hisaishi",
     poster: my_neighbor_totoro_poster,
+    screenTime: "1h 28m",
+    rated: "G",
   },
   {
     id: 5,
@@ -103,6 +111,8 @@ const filmInfo = [
     producers: ["Hayao Miyazaki"],
     music: "Joe Hisaishi",
     poster: kiki_delivery_poster,
+    screenTime: "1h 43m",
+    rated: "G",
   },
   {
     id: 6,
@@ -114,6 +124,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Katz Hoshi",
     poster: only_yesterday_poster,
+    screenTime: "1h 59m",
+    rated: "PG",
   },
   {
     id: 7,
@@ -125,6 +137,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: porco_rosso_poster,
+    screenTime: "1h 42m",
+    rated: "PG",
   },
   {
     id: 8,
@@ -136,6 +150,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Shigeru Nagata",
     poster: ocean_waves_poster,
+    screenTime: "1h 16m",
+    rated: "PG-13",
   },
   {
     id: 9,
@@ -147,6 +163,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Shang Shang Typhoon",
     poster: pom_poko_poster,
+    screenTime: "1h 59m",
+    rated: "PG",
   },
   {
     id: 10,
@@ -158,6 +176,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Yuji Nomi",
     poster: whisper_heart_poster,
+    screenTime: "1h 51m",
+    rated: "G",
   },
   {
     id: 11,
@@ -169,6 +189,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: princess_mononoke_poster,
+    screenTime: "2h 13m",
+    rated: "PG-13",
   },
   {
     id: 12,
@@ -180,6 +202,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Akiko Yano",
     poster: yamadas_poster,
+    screenTime: "1h 44m",
+    rated: "PG",
   },
   {
     id: 13,
@@ -191,6 +215,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: spirited_away_poster,
+    screenTime: "2h 5m",
+    rated: "PG",
   },
   {
     id: 14,
@@ -202,6 +228,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki", "Nozomu Takahashi"],
     music: "Yuji Nomi",
     poster: cat_returns_poster,
+    screenTime: "1h 15m",
+    rated: "G",
   },
   {
     id: 15,
@@ -213,6 +241,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: howls_castle_poster,
+    screenTime: "1h 59m",
+    rated: "PG",
   },
   {
     id: 16,
@@ -224,6 +254,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki", "Tomohiko Ishii"],
     music: "Tamiya Terashima",
     poster: earthsea_poster,
+    screenTime: "1h 56m",
+    rated: "PG-13",
   },
   {
     id: 17,
@@ -235,10 +267,12 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: ponyo_poster,
+    screenTime: "1h 43m",
+    rated: "G",
   },
   {
     id: 18,
-    title: "Arrietty",
+    title: "The Secret World of Arrietty",
     url: "9CtIXPhPo0g",
     year: "2010",
     director: "Hiromasa Yonebayashi",
@@ -246,6 +280,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Cécile Corbel",
     poster: arrietty_poster,
+    screenTime: "1h 35m",
+    rated: "G",
   },
   {
     id: 19,
@@ -257,6 +293,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Satoshi Takebe",
     poster: poppy_hill_poster,
+    screenTime: "1h 32m",
+    rated: "PG",
   },
   {
     id: 20,
@@ -268,6 +306,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Joe Hisaishi",
     poster: wind_rises_poster,
+    screenTime: "2h 6m",
+    rated: "PG-13",
   },
   {
     id: 21,
@@ -279,6 +319,8 @@ const filmInfo = [
     producers: ["Yoshiaki Nishimura"],
     music: "Joe Hisaishi",
     poster: kaguya_poster,
+    screenTime: "2h 17m",
+    rated: "PG",
   },
   {
     id: 22,
@@ -290,7 +332,10 @@ const filmInfo = [
     producers: ["Yoshiaki Nishimura"],
     music: "Takatsugu Muramatsu",
     poster: marnie_poster,
+    screenTime: "1h 43m",
+    rated: "PG",
   },
+  // the red turtle data
   {
     id: 23,
     title: "Earwig and The Witch",
@@ -301,6 +346,8 @@ const filmInfo = [
     producers: ["Toshio Suzuki"],
     music: "Satoshi Takebe",
     poster: earwig_witch_poster,
+    screenTime: "1h 22m",
+    rated: "PG",
   },
 ];
 

@@ -3,18 +3,19 @@ import styled from "styled-components";
 
 const PosterContainer = styled.div`
   cursor: pointer;
-  margin:0 5px;
+  margin: 0 10px;
   position: relative;
-  &:hover img{
+  &:hover img {
     transition: width 1s 0.3s ease-in-out;
-    width:400px;
+    width: 400px;
   }
-  &:hover .poster_detail_container{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+  &:hover .poster_detail_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s 0.3s ease-in-out;
   }
-`
+`;
 
 const PosterImg = styled.img`
   border-radius: 8px;
@@ -22,7 +23,7 @@ const PosterImg = styled.img`
   width: 200px;
   object-fit: cover;
   object-position: center;
-  transition: width 0.2s 0.2s ease-in-out;
+  transition: width 1s 0.3s ease-in-out;
 `;
 
 const PosterDetailContainer = styled.div`
@@ -35,10 +36,11 @@ const PosterDetailContainer = styled.div`
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   width: 400px;
+  padding:0 10px;
 `;
 const DetailTitle = styled.h1`
   font-size:clamp(20px,22px,25px);
-  font-weight:300;
+  font-weight:600;
   color:white;
 `
 const DetailInfo = styled.div`
@@ -48,15 +50,18 @@ const DetailInfo = styled.div`
   align-items:center;
 `
 const DetailInfoText = styled.h3`
-  color:white;
-  margin: 0 10px;
-`
-const DetailInfoRated = styled.h3`
+  font-weight: 500;
   color: white;
-  border:solid white 5px;
+  margin: 0 10px;
+`;
+const DetailInfoRated = styled.h3`
+  font-weight: 500;
+  color: white;
+  border: solid white 4px;
+  padding: 2px;
 `;
 const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{  
-  const handleFilm = (f) =>{
+  const handleFilm = (f) =>{    
     setCurrentVid(f.url)
     setCurrentFilm(f)
   }  
@@ -70,9 +75,10 @@ const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{
         {film.title}
       </DetailTitle>
       <DetailInfo>
-        <DetailInfoRated>PG</DetailInfoRated>
-        <DetailInfoText>2hr</DetailInfoText>
-        <DetailInfoText>1999</DetailInfoText>
+        <DetailInfoRated>{film.rated}</DetailInfoRated>
+        <DetailInfoText>{film.screenTime}</DetailInfoText>
+        <DetailInfoText>{film.year}</DetailInfoText>
+        <DetailInfoText>HBO MAX</DetailInfoText>
       </DetailInfo>
     </PosterDetailContainer>
   </PosterContainer>
