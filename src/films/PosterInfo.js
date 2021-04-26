@@ -55,13 +55,13 @@ const PosterInfo = ({film}) =>{
     <PosterInfoContainer>
       <TitleYearHeader>
         <TitleText>{film.title}</TitleText>
-        <TitleText>Year: {film.year}</TitleText>
       </TitleYearHeader>
       <Overview>
         <PosterImg>
           <Img src={film.poster} />
         </PosterImg>
         <PosterDetails>
+          <Info>Year: {film.year}</Info>
           <Info>Director: {film.director}</Info>
           <Info>Screen Writers: {film.screenWriters}</Info>
           <Info>Producers: {film.producers}</Info>

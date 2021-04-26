@@ -38,6 +38,7 @@ const LArrowContainer = styled.div`
   position: absolute;
   width:30px;
   left: 0;
+  z-index:9999999;
 `;
 const RArrowContainer = styled.div`
   display: flex;
@@ -48,7 +49,8 @@ const RArrowContainer = styled.div`
   height: 100%;
   position: absolute;
   width: 30px;
-  right: 0 ;
+  right: 0;
+  z-index: 9999999;
 `;
 
 const Arrow = styled.h1`
