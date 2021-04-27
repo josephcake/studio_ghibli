@@ -85,9 +85,7 @@ const Films = () => {
   const vidRef = createRef();
   const iframeRef = createRef();
   const [vidDimension, setVidDimension] = useState({ h: 0, w: 0 });
-  const [currentVid, setCurrentVid] = useState(
-    "uBnRTMGRMkM"
-  );
+  const [currentVid, setCurrentVid] = useState(null);
   const [currentFilm, setCurrentFilm] = useState(null)
 
 
@@ -120,7 +118,7 @@ const Films = () => {
           width={vidDimension.w}
           height={vidDimension.h}
           // src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
-          src={`https://www.youtube-nocookie.com/embed/${currentVid}?playlist=${currentVid}&autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
+          src={`https://www.youtube-nocookie.com/embed/${currentVid?currentVid:"uBnRTMGRMkM"}?autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
           title="YouTube video player"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -141,15 +139,16 @@ const Films = () => {
         <Modal
           setCurrentFilm={setCurrentFilm}
           child={
-            <PosterInfo
-              ref={iframeRef}
-              width={vidDimension.w}
-              height={vidDimension.h}
-              film={currentFilm}
-            />
+            <PosterInfo film={currentFilm}/>
           }
         ></Modal>
       ) : null}
+
+      {/* {currentVid?(
+
+      ) : null     
+
+      } */}
     </MediaContainer>
   );
 }
