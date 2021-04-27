@@ -26,12 +26,13 @@ const Img = styled.img`
 
 const PosterInfo = ({film}) =>{
   const id = film.id.toString()
-  const posters = _1.default.map((p)=>
-        <PosterImg key={p}>
-          <Img src={p}/>
-        </PosterImg>
+  console.log(_1[0].default)
+  // const posters = _1.default.map((p)=>
+  //       <PosterImg key={p}>
+  //         <Img src={p}/>
+  //       </PosterImg>
 
-  )
+  // )
 
   return film ? (
     <PosterInfoContainer>      
@@ -40,7 +41,7 @@ const PosterInfo = ({film}) =>{
           <Img src={film.poster} />
         </PosterImg>
       </Overview>
-      {posters}
+      {/* {posters} */}
     </PosterInfoContainer>
   ) : null;
 }
