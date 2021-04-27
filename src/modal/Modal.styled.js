@@ -9,8 +9,7 @@ const Overlay = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 1);
-  /* background-color: gray; */
+  background-color: rgba(30, 30, 30, 1);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -31,6 +30,7 @@ const CloseModal = styled.div`
   width: 100px;
   height: 20px;
   background: rgb(0, 0, 0);
+  /* background: rgb(230, 230, 230); */
   /* background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0) 0%,
