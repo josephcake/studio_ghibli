@@ -335,6 +335,19 @@ const filmInfo = [
   },
   // the red turtle data
   {
+    id: 23,
+    title: "The Red Turtle",
+    url: "j5YJsCDlTDA",
+    year: "2014",
+    director: "Gorō Miyazaki",
+    screenWriters: ["Keiko Niwa", "Emi Gunji"],
+    producers: ["Toshio Suzuki"],
+    music: "Satoshi Takebe",
+    poster: earwig_witch_poster,
+    screenTime: "1h 22m",
+    rated: "PG",
+  },
+  {
     id: 24,
     title: "Earwig and The Witch",
     url: "j5YJsCDlTDA",

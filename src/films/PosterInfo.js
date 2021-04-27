@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import _1 from '../assets/individual'
+import allPosters from '../assets/individual'
 
 
 const PosterInfoContainer = styled.div`
@@ -17,7 +17,7 @@ const Overview = styled.div`
 `
 const PosterImg = styled.div`
   /* width:30%; */
-  /* height:100%; */
+  height:100%;
 `
 const Img = styled.img`
   max-width:680px;
@@ -25,23 +25,22 @@ const Img = styled.img`
 `
 
 const PosterInfo = ({film}) =>{
-  const id = film.id.toString()
-  console.log(_1[0].default)
-  // const posters = _1.default.map((p)=>
-  //       <PosterImg key={p}>
-  //         <Img src={p}/>
-  //       </PosterImg>
-
-  // )
+  const id = film.id.toString();
+  console.log(allPosters);
+  const posters = allPosters[id-1].default.map((p)=>
+        <PosterImg key={p}>
+          <Img src={p}/>
+        </PosterImg>
+  )
 
   return film ? (
-    <PosterInfoContainer>      
+    <PosterInfoContainer>
       <Overview>
         <PosterImg>
           <Img src={film.poster} />
         </PosterImg>
       </Overview>
-      {/* {posters} */}
+      {posters}
     </PosterInfoContainer>
   ) : null;
 }
