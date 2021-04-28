@@ -72,7 +72,7 @@ const Detail = styled.h3`
   /* font-size: clamp(25px, 30px, 35px); */
   font-size: clamp(18px, 20px, 25px);
   margin: 0 20px;  
-  font-weight:200;
+  font-weight:400;
 `;
 const DetailInfoRated = styled.h3`
   font-weight: 500;
