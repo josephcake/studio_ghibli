@@ -43,9 +43,10 @@ const CloseModal = styled.div`
   align-items: center;
   color: white;
   padding: 10px;
+  overflow:hidden;
   &:hover {
     color:black;
-    background: rgb(220, 220, 220);
+    background: rgb(60, 60, 60);
     /* background: linear-gradient(
       90deg,
       rgba(80, 80, 80, 0) 0%,

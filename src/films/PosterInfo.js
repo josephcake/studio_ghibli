@@ -97,8 +97,9 @@ const WatchTrailerWrapper = styled.div`
   left:30px;  
   /* margin-left:20px; */
   bottom:20px;
-`
+  `
 const WatchTrailer = styled.h1`
+  cursor: pointer;
   display:flex;
   justify-content: space-evenly;
   align-items:center;
@@ -109,6 +110,7 @@ const WatchTrailer = styled.h1`
   padding: 10px 30px 10px 0px;
   margin-right: 20px;  
 `;
+
 const SVGImg = styled.img`
   display:block;
   padding: 0 30px;
