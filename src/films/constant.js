@@ -393,7 +393,7 @@ const filmInfo = [
     screenTime: "1h 21m",
     rated: "PG",
     summary:
-      "A massive sea turtle destroys a stranded man's raft every time he tries to sail away from a tropical island.",
+      "The first 20 minutes of the story feel familiar, like a tranquil, cartoon Cast Away: the man searches for food, shelter and a way home. But every escape attempt is thwarted by a huge enigmatic red turtle, forcing him back onto the island, where he soon surrenders and adapts to a new life.",
   },
   {
     id: 24,

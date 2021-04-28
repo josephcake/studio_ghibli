@@ -17,6 +17,7 @@ const Overview = styled.div`
   display: flex;
   width: 100%;
   background-color: black;
+  position: relative;
 `;
 const PosterImg = styled.div`
   /* width:30%; */
@@ -52,6 +53,7 @@ const PosterDetail = styled.div`
   /* align-items:center; */
   padding:0 30px;
   color:white;
+  position: relative;
 `
 const Title = styled.h1`
   /* font-size: clamp(45px, 50px, 55px); */
@@ -81,15 +83,37 @@ const DetailInfoRated = styled.h3`
   padding: 2px;
   margin-right:20px;
 `;
+const Summary = styled.h3`
+  font-size: clamp(18px, 20px, 25px);
+  /* margin: 0 20px; */
+  font-weight: 200;
+  word-spacing:2px;
+  text-align:justify;
+`;
+
+const WatchTrailerWrapper = styled.div`
+  position:absolute;
+  left:30px;  
+  /* margin-left:20px; */
+  bottom:20px;
+`
+const WatchTrailer = styled.h1`
+  font-size:40px;
+  font-weight: 500;
+  color: white;
+  border: solid white 4px;
+  padding: 2px;
+  margin-right: 20px;  
+`;
 
 const PosterInfo = ({film}) =>{
   const id = film.id
   console.log(allPosters);
-  const gallery = allPosters[id-1].default.map((p)=>
-        <PosterImg key={p}>
-          <Img src={p}/>
-        </PosterImg>
-  )
+  // const gallery = allPosters[id-1].default.map((p)=>
+  //       <PosterImg key={p}>
+  //         <Img src={p}/>
+  //       </PosterImg>
+  // )
 
   return film ? (
     <PosterInfoContainer>
@@ -107,6 +131,14 @@ const PosterInfo = ({film}) =>{
             <Detail>{film.screenTime}</Detail>
             <Detail>{film.director}</Detail>
           </DetailsWrapper>
+          <Summary>
+            {film.summary}
+          </Summary>
+          <WatchTrailerWrapper>
+            <WatchTrailer>
+              Watch Trailer
+            </WatchTrailer>
+          </WatchTrailerWrapper>
         </PosterDetail>
       </Overview>
     </PosterInfoContainer>
