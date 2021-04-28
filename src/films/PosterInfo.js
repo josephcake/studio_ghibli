@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import allPosters from '../assets/individual'
+import play from '../assets/icons/play.svg'
 
 
 const PosterInfoContainer = styled.div`
@@ -98,14 +99,20 @@ const WatchTrailerWrapper = styled.div`
   bottom:20px;
 `
 const WatchTrailer = styled.h1`
-  font-size:40px;
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  font-size:35px;
   font-weight: 500;
   color: white;
   border: solid white 4px;
-  padding: 2px;
+  padding: 10px 30px 10px 0px;
   margin-right: 20px;  
 `;
-
+const SVGImg = styled.img`
+  display:block;
+  padding: 0 30px;
+`
 const PosterInfo = ({film}) =>{
   const id = film.id
   console.log(allPosters);
@@ -136,6 +143,7 @@ const PosterInfo = ({film}) =>{
           </Summary>
           <WatchTrailerWrapper>
             <WatchTrailer>
+              <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={play}/>
               Watch Trailer
             </WatchTrailer>
           </WatchTrailerWrapper>

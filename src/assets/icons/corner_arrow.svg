@@ -1,0 +1,30 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="1200"
+  height="1200"
+  viewBox="0 0 1200 1200"
+>
+  <g 
+    transform="translate(600 600) scale(0.69 -0.69) rotate(0) translate(-600 -600)"
+    style="fill:#000000"
+  >
+    <svg
+      fill="#000000"
+      xmlns="http://www.w3.org/2000/svg" 
+      data-name="Layer 1" 
+      viewBox="0 0 100 100" 
+      x="0px" 
+      y="0px"
+    >
+      <title>48</title>
+      <g data-name="Group">
+        <path
+          data-name="Path"
+          d="M15.9,51.5,35.8,71.4a4,4,0,1,0,5.7-5.7L28.4,52.7H69.3a8,8,0,0,1,8,8V71.3a4,4,0,0,0,8,0V60.7a16,16,0,0,0-16-16H28.4L41.5,31.6a4,4,0,1,0-5.7-5.7L15.9,45.8a4,4,0,0,0,0,5.7Z"
+        >
+        </path>
+      </g>
+    </svg>
+  </g>
+</svg>
