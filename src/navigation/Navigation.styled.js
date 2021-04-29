@@ -41,6 +41,7 @@ const NavigationItem = styled.div`
   justify-content:center;
   align-items:center;
   cursor: pointer;
+  
 `;
 const NavigationItemText = styled.h1`
   font-size: clamp(10px, 15px, 18px);

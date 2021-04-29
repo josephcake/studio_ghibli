@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import {
   NavigationBar,
@@ -9,9 +10,37 @@ import {
   Logo,
   LogoJapanese,
 } from "./Navigation.styled.js";
+import line_icon from "../assets/icons/line.png";
+import twitter_icon from "../assets/icons/twitter.png";
 
+const SocialImg = styled.img`
+  width: 40px;
+  height: 40px;
+  object-position: center;
+  object-fit: cover;
+  filter: invert(100%);
+  &.line{
+    border-radius: 4px;
+  }
+  &.twitter {
+    padding:2px;
+    border-radius: 50%;
+  }
+`;
 
-const Navigation = () =>{
+const SocialItem = styled.a`
+  text-decoration: none;
+  &:hover .line {
+    background-color: rgb(255, 70, 255);
+    filter: invert(100%);
+  }
+  &:hover .twitter {
+    background-color: rgb(255, 83, 17);
+    filter: invert(100%);
+  }
+`;
+
+const Navigation = () => {
   return (
     <NavigationBar>
       <NavigationBarInterior>
@@ -44,17 +73,24 @@ const Navigation = () =>{
             <NavigationItemText>Theme Park</NavigationItemText>
           </NavigationItem>
         </NavigationItemContainer>
-        
+
         <NavigationItemContainer>
-          <NavigationItem>
-            <NavigationItemText>Twitter</NavigationItemText>
-          </NavigationItem>
-          <NavigationItem>
-            <NavigationItemText>Line</NavigationItemText>
-          </NavigationItem>
+          <SocialItem
+            href={"https://line.me/ti/p/%40studioghibli"}
+            target={"_blank"}
+          >
+            <NavigationItem>
+              <SocialImg className={"line"} src={line_icon} />
+            </NavigationItem>
+          </SocialItem>
+          <SocialItem href={"https://twitter.com/JP_GHIBLI"} target={"_blank"}>
+            <NavigationItem>
+              <SocialImg className={"twitter"} src={twitter_icon} />
+            </NavigationItem>
+          </SocialItem>
         </NavigationItemContainer>
       </NavigationBarInterior>
     </NavigationBar>
   );
-}
-export default Navigation
+};
+export default Navigation;
