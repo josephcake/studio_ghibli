@@ -19,25 +19,28 @@ const SocialImg = styled.img`
   object-position: center;
   object-fit: cover;
   filter: invert(100%);
-  &.line{
+  &.line {
     border-radius: 4px;
   }
   &.twitter {
-    padding:2px;
+    padding: 2px;
     border-radius: 50%;
+  }
+  &:hover {
+    filter: invert(75%);
   }
 `;
 
 const SocialItem = styled.a`
   text-decoration: none;
-  &:hover .line {
+  /* &:hover .line {
     background-color: rgb(255, 70, 255);
     filter: invert(100%);
   }
   &:hover .twitter {
     background-color: rgb(255, 83, 17);
     filter: invert(100%);
-  }
+  } */
 `;
 
 const Navigation = () => {

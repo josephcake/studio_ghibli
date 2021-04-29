@@ -379,7 +379,6 @@ const filmInfo = [
     summary:
       "When high-schooler Anna becomes clinically disinterested and stressed, she’s sent to stay with friends of her foster parents in the beautiful, seaside town in the country. Struggling to connect with her new guardians, Anna finds solace and a mysterious kindred spirit in Marnie, a girl seemingly out of time who lives in an austere mansion. A tear-jerker about the destructive power of loneliness, Marnie was cited originally as Ghibli’s final work and would have been a perfect swan-song.",
   },
-  // the red turtle data
   {
     id: 23,
     title: "The Red Turtle",

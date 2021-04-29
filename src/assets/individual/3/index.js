@@ -15,6 +15,8 @@ const posters = [
 ]
 
 export default posters
+export { poster_1 };
+
 
 
 // graves of the fireflies

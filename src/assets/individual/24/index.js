@@ -13,3 +13,4 @@ const posters = [
 ]
 
 export default posters
+export { poster_1 };

@@ -2,6 +2,7 @@ import React, {useState, createRef} from 'react';
 import styled from 'styled-components';
 import Modal from '../modal/Modal'
 import allPosters from '../assets/individual'
+import { singlePoster } from "../assets/individual";
 import play from '../assets/icons/play.svg'
 import chat from '../assets/icons/chat.svg'
 import share from '../assets/icons/share.svg'
@@ -152,7 +153,7 @@ const PosterInfo = ({film}) =>{
   const iframeRef = createRef();
   const [modal, setModal] = useState(null)
   const id = film.id
-  console.log(allPosters);
+  // console.log(allPosters);
   // const gallery = allPosters[id-1].default.map((p)=>
   //       <PosterImg key={p}>
   //         <Img src={p}/>
@@ -165,7 +166,7 @@ const PosterInfo = ({film}) =>{
     <PosterInfoContainer>
       <Overview>
         <PosterImg>
-          <Img src={allPosters[id - 1].default[0]} />
+          <Img src={singlePoster[id - 1]} />
           <ImgOverlay className={"overlay"} />
         </PosterImg>
         <PosterDetail>
