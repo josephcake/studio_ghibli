@@ -9,10 +9,10 @@ const SVGImg = styled.img`
   padding: 0 30px;  
 `;
 
-const Modal = ({child, setCurrentFilm}) =>{
+const Modal = ({child, handleModal}) =>{
 
   const handleClose = () =>{
-    setCurrentFilm(null)
+    handleModal(null)
   }
   return (
     <Overlay>

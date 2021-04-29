@@ -99,11 +99,15 @@ const Films = () => {
     }));    
   }, []);
 
+  const handleModal = (e) =>{
+    setCurrentFilm(e)
+  }
+
   const p = filmInfo.map((f) => 
     <Poster 
       key={f.url} 
       setCurrentVid={setCurrentVid} 
-      setCurrentFilm={setCurrentFilm} 
+      handleModal={handleModal} 
       img={f.poster} 
       film={f} 
     />
@@ -137,7 +141,7 @@ const Films = () => {
       </FilmsContainer>
       {currentFilm ? (
         <Modal
-          setCurrentFilm={setCurrentFilm}
+          handleModal={handleModal}
           child={
             <PosterInfo film={currentFilm}/>
           }

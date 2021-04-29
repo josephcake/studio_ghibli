@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState, createRef} from 'react';
 import styled from 'styled-components';
+import Modal from '../modal/Modal'
 import allPosters from '../assets/individual'
 import play from '../assets/icons/play.svg'
 
@@ -115,7 +116,16 @@ const SVGImg = styled.img`
   display:block;
   padding: 0 30px;
 `
+const YoutubeVid = styled.div`
+  /* height: calc(100vh - 360px); */
+  height: 100%;
+  max-width: 100%;
+  display: block;
+`;
 const PosterInfo = ({film}) =>{
+  const vidRef = createRef();
+  const iframeRef = createRef();
+  const [modal, setModal] = useState(null)
   const id = film.id
   console.log(allPosters);
   // const gallery = allPosters[id-1].default.map((p)=>
@@ -123,8 +133,10 @@ const PosterInfo = ({film}) =>{
   //         <Img src={p}/>
   //       </PosterImg>
   // )
-
-  return film ? (
+  const handleModal = (e) =>{
+    setModal(e)
+  }
+  const Poster = film ? (
     <PosterInfoContainer>
       <Overview>
         <PosterImg>
@@ -143,7 +155,7 @@ const PosterInfo = ({film}) =>{
           <Summary>
             {film.summary}
           </Summary>
-          <WatchTrailerWrapper>
+          <WatchTrailerWrapper onClick={()=>setModal(true)}>
             <WatchTrailer>
               <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={play}/>
               Watch Trailer
@@ -153,6 +165,30 @@ const PosterInfo = ({film}) =>{
       </Overview>
     </PosterInfoContainer>
   ) : null;
+
+  return modal ? (
+    <Modal
+      child={
+        <YoutubeVid ref={vidRef}>
+          {/* <Overlay /> */}
+          <iframe
+            ref={iframeRef}
+            width={"100%"}
+            height={"100%"}
+            src={`https://www.youtube-nocookie.com/embed/${film.url}?autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+            allowFullScreen
+          ></iframe>
+        </YoutubeVid>
+      }
+      handleModal={handleModal}
+    ></Modal>
+  ) : (
+    Poster
+  );
+    
 }
 
 export default PosterInfo

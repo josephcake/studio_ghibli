@@ -79,9 +79,9 @@ const DetailInfoButton = styled.div`
 `;
 
 
-const Poster = ({img, film, setCurrentFilm, setCurrentVid }) =>{  
+const Poster = ({img, film, handleModal, setCurrentVid }) =>{  
   const handleSummary = (f)=>{
-    setCurrentFilm(f)
+    handleModal(f)
   }  
   const handleTrailer = (f) =>{    
     setCurrentVid(f.url)
