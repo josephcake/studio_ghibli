@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import Modal from '../modal/Modal'
 import allPosters from '../assets/individual'
 import play from '../assets/icons/play.svg'
+import chat from '../assets/icons/chat.svg'
+import share from '../assets/icons/share.svg'
+import heart from '../assets/icons/heart.svg'
 
 
 const PosterInfoContainer = styled.div`
@@ -94,22 +97,28 @@ const Summary = styled.h3`
 `;
 
 const WatchTrailerWrapper = styled.div`
-  position:absolute;
-  left:30px;  
+  position: absolute;
+  left: 30px;
   /* margin-left:20px; */
-  bottom:20px;
-  `
+  bottom: 20px;
+  &:hover {
+    /* filter: invert(50%); */
+  }
+`;
 const WatchTrailer = styled.h1`
   cursor: pointer;
-  display:flex;
+  display: flex;
   justify-content: space-evenly;
-  align-items:center;
-  font-size:35px;
+  align-items: center;
+  font-size: 35px;
   font-weight: 500;
   color: white;
   border: solid white 4px;
   padding: 10px 30px 10px 0px;
-  margin-right: 20px;  
+  margin-right: 20px;
+  &:hover {
+    background: rgb(60, 60, 60);
+  }
 `;
 
 const SVGImg = styled.img`
@@ -122,6 +131,22 @@ const YoutubeVid = styled.div`
   max-width: 100%;
   display: block;
 `;
+
+const SocialIconContainer = styled.div`
+  position: absolute;
+  display: flex;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  & img {
+    margin: 0;
+    padding: 10px;
+    &:hover {
+      filter: invert(50%);
+    }
+  }
+`;
+
 const PosterInfo = ({film}) =>{
   const vidRef = createRef();
   const iframeRef = createRef();
@@ -140,9 +165,8 @@ const PosterInfo = ({film}) =>{
     <PosterInfoContainer>
       <Overview>
         <PosterImg>
-          {/* <Img src={film.poster} /> */}
-          <Img src={allPosters[id-1].default[0]} />
-          <ImgOverlay className={"overlay"}/>
+          <Img src={allPosters[id - 1].default[0]} />
+          <ImgOverlay className={"overlay"} />
         </PosterImg>
         <PosterDetail>
           <Title>{film.title}</Title>
@@ -152,16 +176,24 @@ const PosterInfo = ({film}) =>{
             <Detail>{film.screenTime}</Detail>
             <Detail>{film.director}</Detail>
           </DetailsWrapper>
-          <Summary>
-            {film.summary}
-          </Summary>
-          <WatchTrailerWrapper onClick={()=>setModal(true)}>
+          <Summary>{film.summary}</Summary>
+          <WatchTrailerWrapper onClick={() => setModal(true)}>
             <WatchTrailer>
-              <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={play}/>
+              <SVGImg
+                fill={"#ffffff"}
+                height={"35px"}
+                width={"35px"}
+                src={play}
+              />
               Watch Trailer
             </WatchTrailer>
           </WatchTrailerWrapper>
         </PosterDetail>
+        <SocialIconContainer>
+          <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={heart} />
+          <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={chat} />
+          <SVGImg fill={"#ffffff"} height={"35px"} width={"35px"} src={share} />
+        </SocialIconContainer>
       </Overview>
     </PosterInfoContainer>
   ) : null;
@@ -170,7 +202,6 @@ const PosterInfo = ({film}) =>{
     <Modal
       child={
         <YoutubeVid ref={vidRef}>
-          {/* <Overlay /> */}
           <iframe
             ref={iframeRef}
             width={"100%"}

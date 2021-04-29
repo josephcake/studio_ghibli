@@ -46,14 +46,7 @@ const CloseModal = styled.div`
   padding: 10px;
   overflow: hidden;
   &:hover {
-    color: black;
-    background: rgb(60, 60, 60);
-    /* background: linear-gradient(
-      90deg,
-      rgba(80, 80, 80, 0) 0%,
-      rgba(80, 80, 80, 0) 10%,
-      rgba(80, 80, 80, 0.8) 100%
-    ); */
+    background: rgb(60, 60, 60);    
   }
 `;
 
