@@ -85,6 +85,7 @@ const FooterBanner = styled.img`
   }
 `;
 const TermsAndCreditWrapper = styled(FooterItemWrapper)`
+  cursor: pointer;
   font-size: clamp(10px, 12px, 14px);
   margin: 0;
   @media (max-width: 1000px) {

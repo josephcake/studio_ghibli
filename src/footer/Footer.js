@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Modal from '../modal/Modal'
+import Credit from './Credit'
 import {CategoryMenu, TravelExhibition, RelatedSites, FooterBanners} from './constant'
 import {
   FooterContainer,
@@ -101,7 +102,7 @@ const Footer = () =>{
       {
         credit?
         <Modal
-          child={<></>}
+          child={<Credit/>}
           handleModal={()=>setCredit(null)}
         >
         </Modal>
