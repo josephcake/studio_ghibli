@@ -38,16 +38,7 @@ import poster_37 from './poster_37.jpg'
 import poster_38 from './poster_38.jpg'
 import poster_39 from './poster_39.jpg'
 import poster_40 from './poster_40.jpg'
-import poster_41 from './poster_41.jpg'
-import poster_42 from './poster_42.jpg'
-import poster_43 from './poster_43.jpg'
-import poster_44 from './poster_44.jpg'
-import poster_45 from './poster_45.jpg'
-import poster_46 from './poster_46.jpg'
-import poster_47 from './poster_47.jpg'
-import poster_48 from './poster_48.jpg'
-import poster_49 from './poster_49.jpg'
-import poster_50 from './poster_50.jpg';
+
 
 
 const posters = [
@@ -91,16 +82,7 @@ const posters = [
   poster_38,
   poster_39,
   poster_40,
-  poster_41,
-  poster_42,
-  poster_43,
-  poster_44,
-  poster_45,
-  poster_46,
-  poster_47,
-  poster_48,
-  poster_49,
-  poster_50
+ 
 ];
 
 export default posters
