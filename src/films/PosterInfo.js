@@ -16,6 +16,9 @@ const PosterInfoContainer = styled.div`
   overflow-y: hidden;
   background-color: black;
   border-radius: 20px;
+  @media (max-width: 1000px) {    
+    border-radius: 0;
+  }
 `;
 
 const Overview = styled.div`
@@ -28,7 +31,10 @@ const PosterImg = styled.div`
   /* width:30%; */
   height: 100%;
   border-radius: 20px 0 0 20px;
-  position: relative;  
+  position: relative;
+  @media (max-width: 1000px) {    
+    border-radius: 0;
+  }
 `;
 const Img = styled.img`
   width: 55vw;
@@ -36,6 +42,10 @@ const Img = styled.img`
   object-position: center;
   object-fit: cover;
   border-radius: 20px 0 0 20px;
+  @media (max-width: 1000px) {
+    height: 90vh;
+    border-radius: 0;
+  }
 `;
 const ImgOverlay = styled.div`
   position: absolute;

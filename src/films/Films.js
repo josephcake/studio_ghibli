@@ -61,6 +61,9 @@ const YoutubeVid = styled.div`
   height: calc(100vh - 360px);
   width: 100vw;
   display: block;
+  @media (max-width: 1000px) {
+    height: calc(100vh - 430px);
+  }
 `;
 
 

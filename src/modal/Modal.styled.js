@@ -21,6 +21,11 @@ const Inner = styled.div`
   height: 80%;
   width: 90%;
   border-radius: 20px;
+  @media (max-width: 1000px) {
+    height: 90%;
+    width: 100%;
+    border-radius: 0;
+  }
 `;
 const CloseModal = styled.div`
   cursor: pointer;
@@ -29,15 +34,7 @@ const CloseModal = styled.div`
   left: 10px;
   width: 100px;
   height: 20px;
-  background: rgb(0, 0, 0);
-  /* background: rgb(230, 230, 230); */
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 10%,
-    rgba(0, 0, 0, 0.8) 100%
-  ); */
-  /* border-radius: 5px; */
+  background: rgb(0, 0, 0);  
   border:solid 3px white;
   display: flex;
   justify-content: center;
