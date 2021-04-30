@@ -33,11 +33,6 @@ import poster_32 from "./poster_32.jpg";
 import poster_33 from "./poster_33.jpg";
 import poster_34 from "./poster_34.jpg";
 import poster_35 from "./poster_35.jpg";
-import poster_36 from "./poster_36.jpg";
-import poster_37 from "./poster_37.jpg";
-import poster_38 from "./poster_38.jpg";
-import poster_39 from "./poster_39.jpg";
-import poster_40 from "./poster_40.jpg";
 
 const posters = [
   poster_1,
@@ -75,11 +70,6 @@ const posters = [
   poster_33,
   poster_34,
   poster_35,
-  poster_36,
-  poster_37,
-  poster_38,
-  poster_39,
-  poster_40,
 ];
 
 export default posters;
