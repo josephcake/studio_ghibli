@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import bg from "./assets/landing_wallpaper.png";
-import earwig from "../assets/posters/poster_earwig_witch.jpg";
+import earwig from "./assets/poster_earwig_witch.jpg";
 
 const LandingContainer = styled.div`
   width: 100vw;
