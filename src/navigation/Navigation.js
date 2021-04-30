@@ -38,7 +38,7 @@ const LinkItem = styled.a`
 
 const Navigation = () => {
   const externalLinks = externalSites.map((a) => (
-    <NavigationItem>
+    <NavigationItem key={a.name}>
       <NavigationItemText>
         <LinkItem href={a.url} target={"_blank"}>
           {a.name}

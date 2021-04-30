@@ -7,7 +7,6 @@ import {
   NavigationItem,
   NavigationItemText,
   Logo,
-  LogoJapanese,
   LogoEnglish,
 } from "./NavigationSecondary.styled.js";
 

@@ -1,18 +1,13 @@
 import React, { createRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import Modal from '../modal/Modal'
-import { posters, filmInfo } from "./constant";
-
+import { filmInfo } from "./constant";
 import Poster from './Posters'
 import PosterInfo from './PosterInfo'
 
 
 const MediaContainer = styled.div`  
 `
-const FilmTrailer = styled.div`
-  width:100vw;
-  height:calc(100vh - 360px);
-`;
 
 const FilmsContainer = styled.div`
   height:320px;
@@ -67,18 +62,7 @@ const YoutubeVid = styled.div`
   width: 100vw;
   display: block;
 `;
-const Overlay = styled.div`
-  position: absolute;
-  /* background-color:rgba(0,0,0,0.3); */
-  top: 80px;
-  height: calc(100vh - 160px);
-  width: 100vw;
-  display: block;
-  z-index: 9999999;
-`;
-const handleFilm = (f) => {
-  console.log(f);
-};
+
 
 const Films = () => {
   
@@ -88,6 +72,7 @@ const Films = () => {
   const [trailer, setTrailer] = useState(null);
   const [summary, setSummary] = useState(null)
   
+
 
 
   useEffect(() => {

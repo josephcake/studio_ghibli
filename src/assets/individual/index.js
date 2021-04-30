@@ -1,4 +1,3 @@
-import React from 'react'
 import * as _1 from './1'
 import * as _2 from './2'
 import * as _3 from './3'

@@ -4,8 +4,9 @@ import './App.css';
 import Navigation from './navigation/Navigation'
 import NavigationSecondary from './navigation/NavigationSecondary'
 import Home from './home/Home'
-import Footer from './footer/Footer'
 import Films from './films/Films'
+import Gallery from './gallery/Gallery'
+import Footer from './footer/Footer'
 
 const App = () => {
   
@@ -15,6 +16,9 @@ const App = () => {
         <Navigation/>
         <NavigationSecondary/>
         <Switch>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
           <Route path="/films">
             <Films />
           </Route>

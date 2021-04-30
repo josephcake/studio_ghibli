@@ -1,11 +1,6 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import amazon from '../assets/icons/services/amazon.png'
-import apple from '../assets/icons/services/apple.png'
-import google from '../assets/icons/services/google.png'
-import hbo from '../assets/icons/services/hbo.png'
-import youtube from '../assets/icons/services/youtube.png'
-import vudu from '../assets/icons/services/vudu.png'
+
 
 const PosterContainer = styled.div`
   margin: 0 10px;

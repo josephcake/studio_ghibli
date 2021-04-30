@@ -1,7 +1,6 @@
 import React, {useState, createRef} from 'react';
 import styled from 'styled-components';
 import Modal from '../modal/Modal'
-import allPosters from '../assets/individual'
 import { singlePoster } from "../assets/individual";
 import play from '../assets/icons/play.svg'
 import chat from '../assets/icons/chat.svg'
