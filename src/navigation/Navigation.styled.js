@@ -15,6 +15,7 @@ const NavigationBar = styled.div`
   color:lightgray;
   position:sticky;
   top:0;
+  z-index:9999;
   @media (max-width:1000px){
     display:none;    
   }

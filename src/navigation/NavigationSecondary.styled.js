@@ -17,6 +17,7 @@ const NavigationBar = styled.div`
   top: 0;
   display: flex;
   overflow-x: scroll;
+  z-index: 9999;
 
   @media (min-width: 1000px) {
     display: none;
