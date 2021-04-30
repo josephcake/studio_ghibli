@@ -1,5 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
+import amazon from '../assets/icons/services/amazon.png'
+import apple from '../assets/icons/services/apple.png'
+import google from '../assets/icons/services/google.png'
+import hbo from '../assets/icons/services/hbo.png'
+import youtube from '../assets/icons/services/youtube.png'
+import vudu from '../assets/icons/services/vudu.png'
 
 const PosterContainer = styled.div`
   margin: 0 10px;
@@ -72,23 +78,55 @@ const DetailInfoButton = styled.div`
   font-weight: 700;
   &:nth-child(2) {
     margin: 0 10px;
-  }
-  /* &:last-child {
-    margin-left: 0 10px;
-  } */
+  } 
 `;
 
+const BannerContainer = styled.div`
+  z-index:99999999;
+  height:50px;
+  width:100vw;
+  position:fixed;
+  top:0;
+  left:0;
+  background-color:maroon;
+  /* opacity:0.9; */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+`
+const BannerText = styled.h1`
+  color:white;
+  text-indent:40px;
+`
+const BannerClose = styled.h1`
+  color: white;
+  margin-right:40px;
+  cursor: pointer;
+`;
 
-const Poster = ({img, film, handleModal, setCurrentVid }) =>{  
+const Poster = ({img, film, handleModal, setTrailer }) =>{  
+  const [banner, setBanner] = useState(null)
   const handleSummary = (f)=>{
     handleModal(f)
   }  
   const handleTrailer = (f) =>{    
-    setCurrentVid(f.url)
+    setTrailer(f.url)
   }
+ 
+  const handleBanner = () =>{
+    console.log("banner clicked");
+    if(!banner){
+      setBanner(true)
+      setTimeout(()=>{
+        setBanner(null)
+      },3000)
+    }
+
+  }
+  
 
   return (
-    <PosterContainer>
+    <PosterContainer >
       <PosterImg src={img}></PosterImg>
       <PosterDetailContainer className={"poster_detail_container"}>
         <DetailTitle>{film.title}</DetailTitle>
@@ -105,11 +143,22 @@ const Poster = ({img, film, handleModal, setCurrentVid }) =>{
           <DetailInfoButton onClick={() => handleTrailer(film)}>
             trailer
           </DetailInfoButton>
-          <DetailInfoButton>watch options</DetailInfoButton>
+          <DetailInfoButton onClick={() => handleBanner()}>
+            watch options
+          </DetailInfoButton>
         </DetailInfo>
       </PosterDetailContainer>
+      {
+        banner?
+        <BannerContainer>
+          <BannerText>Option not available.</BannerText>
+          <BannerClose>X</BannerClose>
+        </BannerContainer>
+        :null
+      }
     </PosterContainer>
   );
 }
 
 export default Poster
+

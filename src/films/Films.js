@@ -85,8 +85,9 @@ const Films = () => {
   const vidRef = createRef();
   const iframeRef = createRef();
   const [vidDimension, setVidDimension] = useState({ h: 0, w: 0 });
-  const [currentVid, setCurrentVid] = useState(null);
-  const [currentFilm, setCurrentFilm] = useState(null)
+  const [trailer, setTrailer] = useState(null);
+  const [summary, setSummary] = useState(null)
+  
 
 
   useEffect(() => {
@@ -99,15 +100,15 @@ const Films = () => {
     }));    
   }, []);
 
-  const handleModal = (e) =>{
-    setCurrentFilm(e)
+  const handleModal_Summary = (e) =>{
+    setSummary(e)
   }
 
   const p = filmInfo.map((f) => 
     <Poster 
       key={f.url} 
-      setCurrentVid={setCurrentVid} 
-      handleModal={handleModal} 
+      setTrailer={setTrailer} 
+      handleModal={handleModal_Summary} 
       img={f.poster} 
       film={f} 
     />
@@ -122,7 +123,9 @@ const Films = () => {
           width={vidDimension.w}
           height={vidDimension.h}
           // src={`https://www.youtube-nocookie.com/embed/${filmInfo[randomlySelectedVid].url}?autoplay=1&mute=1&showinfo=0&controls=1`}
-          src={`https://www.youtube-nocookie.com/embed/${currentVid?currentVid:"uBnRTMGRMkM"}?autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
+          src={`https://www.youtube-nocookie.com/embed/${
+            trailer ? trailer : "uBnRTMGRMkM"
+          }?autoplay=0&mute=0&showinfo=0&controls=1&loop=1`}
           title="YouTube video player"
           frameBorder="0"
           allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -139,16 +142,14 @@ const Films = () => {
         </RArrowContainer>
         <PosterContainer>{p}</PosterContainer>
       </FilmsContainer>
-      {currentFilm ? (
+      {summary ? (
         <Modal
-          handleModal={handleModal}
-          child={
-            <PosterInfo film={currentFilm}/>
-          }
+          handleModal={handleModal_Summary}
+          child={<PosterInfo film={summary} />}
         ></Modal>
       ) : null}
 
-      {/* {currentVid?(
+      {/* {trailer?(
 
       ) : null     
 
