@@ -10,6 +10,7 @@ import {
   Logo,
   LogoJapanese,
 } from "./Navigation.styled.js";
+import {externalSites} from './constant'
 import line_icon from "../assets/icons/line.png";
 import twitter_icon from "../assets/icons/twitter.png";
 
@@ -31,19 +32,20 @@ const SocialImg = styled.img`
   }
 `;
 
-const SocialItem = styled.a`
-  text-decoration: none;
-  /* &:hover .line {
-    background-color: rgb(255, 70, 255);
-    filter: invert(100%);
-  }
-  &:hover .twitter {
-    background-color: rgb(255, 83, 17);
-    filter: invert(100%);
-  } */
+const LinkItem = styled.a`
+  text-decoration: none;  
 `;
 
 const Navigation = () => {
+  const externalLinks = externalSites.map((a) => (
+    <NavigationItem>
+      <NavigationItemText>
+        <LinkItem href={a.url} target={"_blank"}>
+          {a.name}
+        </LinkItem>
+      </NavigationItemText>
+    </NavigationItem>
+  ));
   return (
     <NavigationBar>
       <NavigationBarInterior>
@@ -64,33 +66,28 @@ const Navigation = () => {
             </NavigationItemText>
           </NavigationItem>
           <NavigationItem>
-            <NavigationItemText>Latest Info</NavigationItemText>
+            <NavigationItemText>
+              <Link to="gallery">gallery</Link>
+            </NavigationItemText>
           </NavigationItem>
-          <NavigationItem>
-            <NavigationItemText>Event Info</NavigationItemText>
-          </NavigationItem>
-          <NavigationItem>
-            <NavigationItemText>Museum</NavigationItemText>
-          </NavigationItem>
-          <NavigationItem>
-            <NavigationItemText>Theme Park</NavigationItemText>
-          </NavigationItem>
+
+          {externalLinks}          
         </NavigationItemContainer>
 
         <NavigationItemContainer>
-          <SocialItem
+          <LinkItem
             href={"https://line.me/ti/p/%40studioghibli"}
             target={"_blank"}
           >
             <NavigationItem>
               <SocialImg className={"line"} src={line_icon} />
             </NavigationItem>
-          </SocialItem>
-          <SocialItem href={"https://twitter.com/JP_GHIBLI"} target={"_blank"}>
+          </LinkItem>
+          <LinkItem href={"https://twitter.com/JP_GHIBLI"} target={"_blank"}>
             <NavigationItem>
               <SocialImg className={"twitter"} src={twitter_icon} />
             </NavigationItem>
-          </SocialItem>
+          </LinkItem>
         </NavigationItemContainer>
       </NavigationBarInterior>
     </NavigationBar>
