@@ -1,5 +1,5 @@
-import React from 'react';
-
+import React, {useState} from 'react';
+import Modal from '../modal/Modal'
 import {CategoryMenu, TravelExhibition, RelatedSites, FooterBanners} from './constant'
 import {
   FooterContainer,
@@ -18,6 +18,12 @@ import {
 
 
 const Footer = () =>{
+
+  const [credit, setCredit] = useState(null)
+  const handleCredit = () =>{
+    setCredit(true)
+  }
+
   const catergoryMenu = CategoryMenu.map((data) => (
     <FooterItemWrapper key={data.url}>
       <FooterItem href={data.url} target={"_blank"}>
@@ -86,13 +92,21 @@ const Footer = () =>{
           </TermsAndCreditWrapper>
           <TermsAndCreditWrapper>
             <TermsAndCreditItem
-              href={"https://www.ghibli.jp/mail/"}
-              target={"_blank"}
+              onClick={handleCredit}
             >
               Credits
             </TermsAndCreditItem>
           </TermsAndCreditWrapper>
       </FooterSecondary>
+      {
+        credit?
+        <Modal
+          child={<></>}
+          handleModal={()=>setCredit(null)}
+        >
+        </Modal>
+        :null
+      }
     </FooterContainer>
   );
 }
