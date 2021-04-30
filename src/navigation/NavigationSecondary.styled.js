@@ -9,8 +9,6 @@ const NavigationBar = styled.div`
   width: 100vw;
   height: 100px;
   background-color: rgba(20, 20, 20, 0.9);
-  /* background-color: black; */
-  /* background-color: palevioletred; */
   padding: 5px 0px;
   color: lightgray;
   position: sticky;
@@ -18,7 +16,6 @@ const NavigationBar = styled.div`
   display: flex;
   overflow-x: scroll;
   z-index: 9999;
-
   @media (min-width: 1000px) {
     display: none;
   }
